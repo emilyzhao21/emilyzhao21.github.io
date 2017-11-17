@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Labster Two:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="昨天总结了数组的方法，今天安利一下字符串常用的方法，一般数组方法和字符串方法都是结合使用的，先将基础方法总结一下，利于使用。之后会给大家安利一下关于这方面的面试题。 字符串的方法split()方法使用指定的分隔符字符串将一个String对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置参数:  字符串">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中数组和字符串的常用方法（二）">
+<meta property="og:url" content="http://yoursite.com/2015/10/31/JS中数组和字符串的常用方法（二）/index.html">
+<meta property="og:site_name" content="Y刺猬菇凉">
+<meta property="og:description" content="昨天总结了数组的方法，今天安利一下字符串常用的方法，一般数组方法和字符串方法都是结合使用的，先将基础方法总结一下，利于使用。之后会给大家安利一下关于这方面的面试题。 字符串的方法split()方法使用指定的分隔符字符串将一个String对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置参数:  字符串中存在的分隔符，在有此分隔符的地方进行分隔例:">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/img/js/split.png">
+<meta property="og:image" content="http://yoursite.com/img/js/split2.png">
+<meta property="og:updated_time" content="2017-11-17T12:56:51.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS中数组和字符串的常用方法（二）">
+<meta name="twitter:description" content="昨天总结了数组的方法，今天安利一下字符串常用的方法，一般数组方法和字符串方法都是结合使用的，先将基础方法总结一下，利于使用。之后会给大家安利一下关于这方面的面试题。 字符串的方法split()方法使用指定的分隔符字符串将一个String对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置参数:  字符串中存在的分隔符，在有此分隔符的地方进行分隔例:">
+<meta name="twitter:image" content="http://yoursite.com/img/js/split.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/10/31/JS中数组和字符串的常用方法（二）/"/>
+
+
+
+
+
+  <title>JS中数组和字符串的常用方法（二） | Y刺猬菇凉</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?e2918cc1c6f5e889ca38bb281962c7b0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Y刺猬菇凉</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">When you have a idea,Just do it</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/31/JS中数组和字符串的常用方法（二）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Y刺猬菇凉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/headIcon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Y刺猬菇凉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JS中数组和字符串的常用方法（二）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-31T00:00:00+08:00">
+                2015-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>昨天总结了数组的方法，今天安利一下字符串常用的方法，一般数组方法和字符串方法都是结合使用的，先将基础方法总结一下，利于使用。之后会给大家安利一下关于这方面的面试题。</p>
+<h2 id="字符串的方法"><a href="#字符串的方法" class="headerlink" title="字符串的方法"></a>字符串的方法</h2><h3 id="split-方法"><a href="#split-方法" class="headerlink" title="split()方法"></a>split()方法</h3><p><strong>使用指定的分隔符字符串将一个String对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置</strong><br><strong>参数:</strong></p>
+<ol>
+<li>字符串中存在的分隔符，在有此分隔符的地方进行分隔<br>例:<img src="/img/js/split.png" alt="split"><a id="more"></a></li>
+<li>限制返回值中分隔元素数量<br>例:<img src="/img/js/split2.png" alt="split2"><br>即先用指定的分隔符分隔字符串，返回数组时，按照定义的个数取元素的个数</li>
+</ol>
+<h3 id="charAt-方法"><a href="#charAt-方法" class="headerlink" title="charAt()方法"></a>charAt()方法</h3><p><strong>从一个字符串中返回指定的字符 语法：str.charAt(index) index是索引值</strong></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">'Just a joke!'</span>;</span><br><span class="line">console.log(str.charAt(0)); //J</span><br><span class="line">console.log(str.charAt(1)); //u</span><br><span class="line">console.log(str.charAt(2)); //s</span><br><span class="line">console.log(str.charAt(3)); //t</span><br><span class="line">console.log(str.charAt(5, 7)); //a</span><br></pre></td></tr></table></figure>
+<p>从上面的实例来看，charAt()只有一个参数，写上第二个参数，不会报错也没有任何效果<br>可以使用for循环遍历字符串，获取所有的字符<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (var i = 0; i &lt; str.length; i++) &#123;</span><br><span class="line">var result = str.charAt(i);</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure></p>
+<h3 id="charCodeAt-方法"><a href="#charCodeAt-方法" class="headerlink" title="charCodeAt()方法"></a>charCodeAt()方法</h3><p><strong>返回0到65535之间的整数，表示字符的Unicode编码值</strong><br>参数仍是字符的索引值<br>例:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">'abc'</span>;</span><br><span class="line">console.log(str.charCodeAt(0));//97</span><br></pre></td></tr></table></figure></p>
+<p>此例返回结果是97，表示小写字母a的Unicode编码值是97</p>
+<h3 id="concat-方法"><a href="#concat-方法" class="headerlink" title="concat()方法"></a>concat()方法</h3><p><strong>将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回<span style="color:#D93741;">concat方法并不影响原字符串</span></strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str1 = <span class="string">'Hello'</span>;</span><br><span class="line">var str2 = <span class="string">'World!'</span>;</span><br><span class="line">var str = str1.concat(<span class="string">' '</span> + str2);</span><br><span class="line">console.log(str); //Hello World!</span><br></pre></td></tr></table></figure></p>
+<h3 id="indexOf-方法"><a href="#indexOf-方法" class="headerlink" title="indexOf()方法"></a>indexOf()方法</h3><p><strong>返回调用String对象中第一次出现的指定值的索引，在设定位置开始查找，未找到则返回-1</strong><br><strong>参数：</strong></p>
+<ol>
+<li>第一个参数是：被查找的值</li>
+<li>表示字符串中开始查找的位置。默认为0。如果值小于0，则查找整个字符串;如果大于字符串的长度，则返回-1，除非被查找的字符串是一个空字符串，那么此时返回的是字符串的长度</li>
+</ol>
+<p>例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">'Hello World!'</span>;</span><br><span class="line">var str1 = str.indexOf(<span class="string">'Hello'</span>); //0</span><br><span class="line">var str2 = str.indexOf(<span class="string">'World'</span>); //6</span><br><span class="line">var str3 = str.indexOf(<span class="string">'World'</span>,0);//6</span><br><span class="line">var str4 = str.indexOf(<span class="string">'World'</span>,5);//6</span><br><span class="line">var str5 = str.indexOf(<span class="string">''</span>,10);  //10</span><br><span class="line">var str6 = str.indexOf(<span class="string">''</span>,11); //11</span><br><span class="line">var str7 = str.indexOf(<span class="string">'hi'</span>); //-1</span><br><span class="line">console.log(str1+<span class="string">' '</span>+str2+<span class="string">' '</span></span><br><span class="line">+str3+<span class="string">' '</span>+str4+<span class="string">' '</span>+str5+<span class="string">' '</span>+str6+<span class="string">' '</span>+str7);</span><br></pre></td></tr></table></figure></p>
+<p><span style="color:#D93741;">注:此方法区分大小写</span><br>例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(<span class="string">'Hello World!'</span>.indexOf(<span class="string">'hello'</span>)); // 返回值为-1</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>可以使用indexOf统计一个字符串中的某个字母出现的次数。例如以下示例：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">'The One Who Wants to Wear a Crown Must Bear the Weight'</span>;  //欲戴王冠，必承其重</span><br><span class="line">var count = 0;</span><br><span class="line">var o = str.indexOf(<span class="string">'o'</span>); //返回的值是第一个o的索引值</span><br><span class="line"><span class="keyword">while</span>(o !== -1)&#123; //当值等于-1时表示找不到</span><br><span class="line">	count++;</span><br><span class="line">	o=str.indexOf(<span class="string">'o'</span>,o+1); //第二个参数表示开始查找的位置</span><br><span class="line">&#125;</span><br><span class="line">console.log(count);</span><br></pre></td></tr></table></figure>
+<h3 id="substr-方法"><a href="#substr-方法" class="headerlink" title="substr()方法"></a>substr()方法</h3><p><strong> substr()方法返回一个字符串中从指定位置开始到指定字符数的字符 </strong><br><strong> 参数： </strong><br>str.substr(start[,length])<br>1.start 是提取字符开始的位置(索引值)。如果是负值，则被看做strLength + start，例如strLength的值为-2.那么就是strLength-2，其中strLength是字符串的长度<br>2.第二个参数length，是提取的字符数，即截取字符的个数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"I am a Girl."</span>;</span><br><span class="line">var newStr1 = str.substr(2,2);</span><br><span class="line">var newStr2 = str.substr(-3,2);</span><br><span class="line">console.log(newStr1,newStr2); //am rl</span><br></pre></td></tr></table></figure>
+<h3 id="substring-方法"><a href="#substring-方法" class="headerlink" title="substring()方法"></a>substring()方法</h3><p><strong> str.substring()方法返回一个字符串在开始索引发哦结束索引之间的一个子集，或从开始索引直到字符串的末尾的一个子集 </strong><br><strong> 参数： </strong><br>str.substring(indexStart[,indexEnd])<br>1.indexStart 是开始截取的索引值<br>2.indexEnd是结束截取位置的索引值，不包括结束位置的字符<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"I am a Girl."</span>;</span><br><span class="line">var newStr = str.substring(2,10);</span><br><span class="line">console.log(newStr); //am a Gir</span><br></pre></td></tr></table></figure></p>
+<p><strong> strsub()和strstring()两个方法都是截取字符串的方法，两者的区别在于第二个参数的意思。strsub()方法的第二个参数表示截取字符的个数，而substring()方法的第二个参数表示的是结束位置的索引值</strong></p>
+<h3 id="replace-方法"><a href="#replace-方法" class="headerlink" title="replace()方法"></a>replace()方法</h3><p><strong> replace()方法返回一个由替换值替换一些或所有匹配的模式后的新字符串。模式可以是一个字符串或者一个正则表达式，替换值可以是一个字符串或者一个每次匹配都要调用的函数 </strong><br><span style="color:#D93741;">注：不改变原字符串</span><br><strong> 参数： </strong><br>str.replace(str|RegExp，newStr|function)<br>1.第一个参数可以是字符串str，也可以是RegExp正则表达式<br>2.第二个参数可以是一个新的字符串newStr，也可以是一个返回新字符串的函数function</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">"AABBAABB"</span>;</span><br><span class="line">var newstr1 = str.replace(<span class="string">'B'</span>,<span class="string">'A'</span>);</span><br><span class="line">console.log(newstr);//AAABAABB 使用字符串替换字符串只会将找到的第一个匹配的字符替换</span><br><span class="line">var newstr2 = str.replace(<span class="string">'/B/g'</span>,<span class="string">'A'</span>);//  <span class="string">'/B/g'</span>在全局查找B并替换成A</span><br><span class="line">console.log(newstr2); //AAAAAAAA</span><br><span class="line">var newstr3 = str.replace(<span class="string">'BB'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	<span class="built_in">return</span> <span class="string">'AA'</span>;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(newstr3); //AAAAAABB  找到第一个匹配项并替换</span><br></pre></td></tr></table></figure>
+<h3 id="trim-方法"><a href="#trim-方法" class="headerlink" title="trim()方法"></a>trim()方法</h3><p><strong> 去除字符串两端的空白字符 </strong><br><span style="color:#D93741;">注：不改变原字符串</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = <span class="string">' THE END '</span>;</span><br><span class="line">var newstr = str.trim();</span><br><span class="line">console.log(<span class="string">'['</span>+str+<span class="string">']'</span>,<span class="string">'['</span>+newstr+<span class="string">']'</span>); // [ THE END ] [THE END]</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/24/JS中数组和字符串的常用方法（一）/" rel="next" title="JS中数组和字符串的常用方法（一）">
+                <i class="fa fa-chevron-left"></i> JS中数组和字符串的常用方法（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/14/vscode Insider中常用的插件/" rel="prev" title="常用的前端IDE以及Visual Studio Code Insider中常用的插件">
+                常用的前端IDE以及Visual Studio Code Insider中常用的插件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2142766" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUxNC83MDY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/headIcon.png"
+              alt="Y刺猬菇凉" />
+          
+            <p class="site-author-name" itemprop="name">Y刺猬菇凉</p>
+            <p class="site-description motion-element" itemprop="description">html,css,js,Web前端开发工程师</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/emilyzhao21" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="emily_zdy@163.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/aiya-26-98/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com" title="NexT使用文档" target="_blank">NexT使用文档</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串的方法"><span class="nav-number">1.</span> <span class="nav-text">字符串的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#split-方法"><span class="nav-number">1.1.</span> <span class="nav-text">split()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#charAt-方法"><span class="nav-number">1.2.</span> <span class="nav-text">charAt()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#charCodeAt-方法"><span class="nav-number">1.3.</span> <span class="nav-text">charCodeAt()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#concat-方法"><span class="nav-number">1.4.</span> <span class="nav-text">concat()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf-方法"><span class="nav-number">1.5.</span> <span class="nav-text">indexOf()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#substr-方法"><span class="nav-number">1.6.</span> <span class="nav-text">substr()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#substring-方法"><span class="nav-number">1.7.</span> <span class="nav-text">substring()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#replace-方法"><span class="nav-number">1.8.</span> <span class="nav-text">replace()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#trim-方法"><span class="nav-number">1.9.</span> <span class="nav-text">trim()方法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 &mdash; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Y刺猬菇凉</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

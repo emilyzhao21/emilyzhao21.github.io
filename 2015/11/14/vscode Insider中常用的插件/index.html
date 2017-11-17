@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Labster Two:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="IDE," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="额…好久没有更博了。今天好像是个虐”狗”的节日，不过没关系，博主不出门，哼，眼不见为静…工欲善其事，必先利其器。最近博主发现了一款”神器”，是什么呢？就是Visual Studio Code Insider了。自从博主接触前端以来，用遍了所有的IDE(有点夸张)，例如Sublime,webstrom,IntelliJ ">
+<meta name="keywords" content="IDE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的前端IDE以及Visual Studio Code Insider中常用的插件">
+<meta property="og:url" content="http://yoursite.com/2015/11/14/vscode Insider中常用的插件/index.html">
+<meta property="og:site_name" content="Y刺猬菇凉">
+<meta property="og:description" content="额…好久没有更博了。今天好像是个虐”狗”的节日，不过没关系，博主不出门，哼，眼不见为静…工欲善其事，必先利其器。最近博主发现了一款”神器”，是什么呢？就是Visual Studio Code Insider了。自从博主接触前端以来，用遍了所有的IDE(有点夸张)，例如Sublime,webstrom,IntelliJ IDEA,HBuilder，Visual Studio Code这几个。Subl">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/img/ActiveFileInStatusBar.gif">
+<meta property="og:image" content="http://yoursite.com/img/AutoFileName.gif">
+<meta property="og:image" content="http://yoursite.com/img/demo.gif">
+<meta property="og:image" content="http://yoursite.com/img/howto.png">
+<meta property="og:image" content="http://yoursite.com/img/html5.gif">
+<meta property="og:image" content="http://yoursite.com/img/css1.gif">
+<meta property="og:image" content="http://yoursite.com/img/css2.gif">
+<meta property="og:image" content="http://yoursite.com/img/css3.gif">
+<meta property="og:image" content="http://yoursite.com/img/snippets.png">
+<meta property="og:updated_time" content="2017-11-17T12:56:30.287Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用的前端IDE以及Visual Studio Code Insider中常用的插件">
+<meta name="twitter:description" content="额…好久没有更博了。今天好像是个虐”狗”的节日，不过没关系，博主不出门，哼，眼不见为静…工欲善其事，必先利其器。最近博主发现了一款”神器”，是什么呢？就是Visual Studio Code Insider了。自从博主接触前端以来，用遍了所有的IDE(有点夸张)，例如Sublime,webstrom,IntelliJ IDEA,HBuilder，Visual Studio Code这几个。Subl">
+<meta name="twitter:image" content="http://yoursite.com/img/ActiveFileInStatusBar.gif">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/11/14/vscode Insider中常用的插件/"/>
+
+
+
+
+
+  <title>常用的前端IDE以及Visual Studio Code Insider中常用的插件 | Y刺猬菇凉</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?e2918cc1c6f5e889ca38bb281962c7b0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Y刺猬菇凉</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">When you have a idea,Just do it</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/14/vscode Insider中常用的插件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Y刺猬菇凉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/headIcon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Y刺猬菇凉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常用的前端IDE以及Visual Studio Code Insider中常用的插件</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-14T00:00:00+08:00">
+                2015-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IDE/" itemprop="url" rel="index">
+                    <span itemprop="name">IDE</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>额…好久没有更博了。今天好像是个虐”狗”的节日，不过没关系，博主不出门，哼，眼不见为静…<br>工欲善其事，必先利其器。最近博主发现了一款”神器”，是什么呢？就是Visual Studio Code Insider了。<br>自从博主接触前端以来，用遍了所有的IDE(有点夸张)，例如Sublime,webstrom,IntelliJ IDEA,HBuilder，Visual Studio Code这几个。<br>Sublime是轻量级的，很好用，很好入门，所以刚开始学前端的时候，可以使用这个，那么后来呢？就是接触了重量级的webstrom和IntelliJ IDEA，里面有丰富的插件，IntelliJ IDEA比webstrom的功能更全，缺点就是打开速度太慢，就博主的电脑而言，实在是受不了，HBuilder安装使用后，不太喜欢主题风格，大部分都是明亮的色调，博主还是喜欢暗色调多一些，不过它的代码提示确实挺好用的，所以后来了解到了vscode Insider(和vscode差不多，博主都用过)。它有各式各样的插件，有人说是进阶版的Atom，但是博主没有接触过这个东西，所以不太了解，不过VScode确实好用。</p>
+<p>废话说了那么多，接下来就介绍一下博主使用的一些基础插件吧。<br><a id="more"></a></p>
+<h2 id="Active-File-In-StatusBar"><a href="#Active-File-In-StatusBar" class="headerlink" title="Active File In StatusBar"></a>Active File In StatusBar</h2><p>这是一个在左下角显示文件所在路径的插件<br><img src="/img/ActiveFileInStatusBar.gif" alt="Active File In StatusBar"></p>
+<h2 id="AutoFileName"><a href="#AutoFileName" class="headerlink" title="AutoFileName"></a>AutoFileName</h2><p>没有这个真的很烦人，文件名要一步一步的输入，还没有提示，有了这个插件就OK了！<br><img src="/img/AutoFileName.gif" alt="AutoFileName"></p>
+<h2 id="File-Utils"><a href="#File-Utils" class="headerlink" title="File Utils"></a>File Utils</h2><p>创建，复制，移动，重命名，删除文件和目录的便捷方式。<br><img src="/img/demo.gif" alt="fileutils"></p>
+<h3 id="使用命令面板"><a href="#使用命令面板" class="headerlink" title="使用命令面板"></a>使用命令面板</h3><ul>
+<li>shift+ctrl+P打开命令面板，输入file</li>
+<li>选择以下提示的命令之一</li>
+<li>按[Enter]确认，或[Esc]取消</li>
+</ul>
+<p><img src="/img/howto.png" alt="howto"></p>
+<h2 id="HTML-Snippets"><a href="#HTML-Snippets" class="headerlink" title="HTML Snippets"></a>HTML Snippets</h2><p>输入片段的一部分，按回车键，代码段展开,必备插件<br><img src="/img/html5.gif" alt="html5"></p>
+<h2 id="IntellSense-for-CSS-class-names"><a href="#IntellSense-for-CSS-class-names" class="headerlink" title="IntellSense for CSS class names"></a>IntellSense for CSS class names</h2><p>一个Visual Studio代码扩展，它为HTML类属性提供CSS类的名称完成，这基于CSS类定义，这些定义可以在您的工作空间中找到，也可以通过链接元素引用的外部文件中找到<br><img src="/img/css1.gif" alt="css1"></p>
+<p>如果工作区上有HTML文件，扩展名将自动启动并查找CSS类定义。如果新的CSS类被定义或新的CSS文件被添加到工作区，并且您还希望自动完成它们，只需点击闪电图标，您将在状态栏上找到并执行命令Ctrl+Shift+P，然后键入“缓存CSS类定义”<br><img src="/img/css2.gif" alt="css2"><br><img src="/img/css3.gif" alt="css3"></p>
+<h2 id="JavaScript-ES6-code-snippets"><a href="#JavaScript-ES6-code-snippets" class="headerlink" title="JavaScript (ES6) code snippets"></a>JavaScript (ES6) code snippets</h2><p>这个插件是es6语法的代码补全，推荐给大家一个es6的入门教程 <a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">ECMAScript 6 入门</a>,这本书是阮一峰老师写的，可以看一下。</p>
+<h2 id="jQuery-Code-Snippets"><a href="#jQuery-Code-Snippets" class="headerlink" title="jQuery Code Snippets"></a>jQuery Code Snippets</h2><p>只需输入字母“jq”，就可以获得所有可用的jQuery代码片段的列表<br><img src="/img/snippets.png" alt="snippets"></p>
+<h2 id="View-in-Browser"><a href="#View-in-Browser" class="headerlink" title="View in Browser"></a>View in Browser</h2><p>这个就不用说了，必须的，在浏览器中打开，Ctrl+F1或者工作区选中文件右击View in Browser </p>
+<p>恩，暂时就这么多了，其他的就不介绍了，想要了解更多插件的小伙伴，可以去下面的链接地址看看(<a href="https://segmentfault.com/a/1190000006697219" target="_blank" rel="noopener">https://segmentfault.com/a/1190000006697219</a>)</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/IDE/" rel="tag"># IDE</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/31/JS中数组和字符串的常用方法（二）/" rel="next" title="JS中数组和字符串的常用方法（二）">
+                <i class="fa fa-chevron-left"></i> JS中数组和字符串的常用方法（二）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/28/重装Git后，Git bash Here 和 Git GUI here 失效的解决方法/" rel="prev" title="重装Git后，Git bash Here 和 Git GUI here 失效的解决方法">
+                重装Git后，Git bash Here 和 Git GUI here 失效的解决方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2142766" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUxNC83MDY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/headIcon.png"
+              alt="Y刺猬菇凉" />
+          
+            <p class="site-author-name" itemprop="name">Y刺猬菇凉</p>
+            <p class="site-description motion-element" itemprop="description">html,css,js,Web前端开发工程师</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/emilyzhao21" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="emily_zdy@163.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/aiya-26-98/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com" title="NexT使用文档" target="_blank">NexT使用文档</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Active-File-In-StatusBar"><span class="nav-number">1.</span> <span class="nav-text">Active File In StatusBar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AutoFileName"><span class="nav-number">2.</span> <span class="nav-text">AutoFileName</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File-Utils"><span class="nav-number">3.</span> <span class="nav-text">File Utils</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用命令面板"><span class="nav-number">3.1.</span> <span class="nav-text">使用命令面板</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-Snippets"><span class="nav-number">4.</span> <span class="nav-text">HTML Snippets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IntellSense-for-CSS-class-names"><span class="nav-number">5.</span> <span class="nav-text">IntellSense for CSS class names</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-ES6-code-snippets"><span class="nav-number">6.</span> <span class="nav-text">JavaScript (ES6) code snippets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery-Code-Snippets"><span class="nav-number">7.</span> <span class="nav-text">jQuery Code Snippets</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#View-in-Browser"><span class="nav-number">8.</span> <span class="nav-text">View in Browser</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 &mdash; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Y刺猬菇凉</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

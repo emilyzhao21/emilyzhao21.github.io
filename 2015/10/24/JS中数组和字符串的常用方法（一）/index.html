@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Labster Two:300,300italic,400,400italic,700,700italic|Consolas:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="(⊙o⊙)…，又过了这么久才更博，博主最近在JS字符串和数组方法的使用上进坑了，那么今天就总结下这些方法的使用，自己加深下印象，也给你们一个参考。 数组的方法push()方法将一个或多个元素添加到数组的末尾，并返回数组的新长度。 此方法会改变原数组 定义一个新数组1234var arr=[];var arr1=arr.">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中数组和字符串的常用方法（一）">
+<meta property="og:url" content="http://yoursite.com/2015/10/24/JS中数组和字符串的常用方法（一）/index.html">
+<meta property="og:site_name" content="Y刺猬菇凉">
+<meta property="og:description" content="(⊙o⊙)…，又过了这么久才更博，博主最近在JS字符串和数组方法的使用上进坑了，那么今天就总结下这些方法的使用，自己加深下印象，也给你们一个参考。 数组的方法push()方法将一个或多个元素添加到数组的末尾，并返回数组的新长度。 此方法会改变原数组 定义一个新数组1234var arr=[];var arr1=arr.push(&apos;123&apos;);console.log(arr); //[&apos;123&apos;]c">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/img/js/push.png">
+<meta property="og:image" content="http://yoursite.com/img/js/pop.png">
+<meta property="og:image" content="http://yoursite.com/img/js/reverse.png">
+<meta property="og:image" content="http://yoursite.com/img/js/join.png">
+<meta property="og:image" content="http://yoursite.com/img/js/join2.png">
+<meta property="og:image" content="http://yoursite.com/img/js/slice.png">
+<meta property="og:image" content="http://yoursite.com/img/js/slice2.png">
+<meta property="og:image" content="http://yoursite.com/img/js/splice.png">
+<meta property="og:image" content="http://yoursite.com/img/js/toString.png">
+<meta property="og:image" content="http://yoursite.com/img/js/indexOf.png">
+<meta property="og:image" content="http://yoursite.com/img/js/forEach.png">
+<meta property="og:updated_time" content="2017-11-17T12:52:56.585Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS中数组和字符串的常用方法（一）">
+<meta name="twitter:description" content="(⊙o⊙)…，又过了这么久才更博，博主最近在JS字符串和数组方法的使用上进坑了，那么今天就总结下这些方法的使用，自己加深下印象，也给你们一个参考。 数组的方法push()方法将一个或多个元素添加到数组的末尾，并返回数组的新长度。 此方法会改变原数组 定义一个新数组1234var arr=[];var arr1=arr.push(&apos;123&apos;);console.log(arr); //[&apos;123&apos;]c">
+<meta name="twitter:image" content="http://yoursite.com/img/js/push.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/10/24/JS中数组和字符串的常用方法（一）/"/>
+
+
+
+
+
+  <title>JS中数组和字符串的常用方法（一） | Y刺猬菇凉</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?e2918cc1c6f5e889ca38bb281962c7b0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Y刺猬菇凉</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">When you have a idea,Just do it</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/24/JS中数组和字符串的常用方法（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Y刺猬菇凉">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/headIcon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Y刺猬菇凉">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JS中数组和字符串的常用方法（一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-24T00:00:00+08:00">
+                2015-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>(⊙o⊙)…，又过了这么久才更博，博主最近在JS字符串和数组方法的使用上进坑了，那么今天就总结下这些方法的使用，自己加深下印象，也给你们一个参考。</p>
+<h2 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h2><h3 id="push-方法"><a href="#push-方法" class="headerlink" title="push()方法"></a>push()方法</h3><p><b>将一个或多个元素添加到数组的末尾，并返回数组的新长度。 <span style="color:#D93741;">此方法会改变原数组</span></b></p>
+<p>定义一个新数组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr=[];</span><br><span class="line">var arr1=arr.push(<span class="string">'123'</span>);</span><br><span class="line">console.log(arr); //[<span class="string">'123'</span>]</span><br><span class="line">console.log(arr1); //1 push()方法的返回值</span><br></pre></td></tr></table></figure></p>
+<p>输出结果:<img src="/img/js/push.png" alt="push()方法"><br>这时arr数组就变成了[‘123’],改变了原数组的长度。length是数组的一个属性，返回值是数组的长度。<br><a id="more"></a></p>
+<h3 id="unshift-方法"><a href="#unshift-方法" class="headerlink" title="unshift()方法"></a>unshift()方法</h3><p><b>将一个或多个元素添加到数组的开头，并返回新数组的长度。<span style="color:#D93741;">此方法会改变原数组</span></b><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3];</span><br><span class="line">var arr1=arr.unshift(0);</span><br><span class="line">console.log(arr); //[0,1,2,3]</span><br><span class="line">console.log(arr1); //4 unshift()方法的返回值</span><br></pre></td></tr></table></figure></p>
+<p>unshift()方法与push()方法类似，只不过是unshift是在数组开头添加元素，push是在数组最后添加元素。返回值都是新数组的长度。</p>
+<h3 id="pop-方法"><a href="#pop-方法" class="headerlink" title="pop()方法"></a>pop()方法</h3><p><b>从原数组中删除最后一个元素，并返回该元素的值。<span style="color:#D93741;">此方法会改变原数组</span></b></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3];</span><br><span class="line">console.log(arr.length);</span><br><span class="line">var arr1=arr.pop();</span><br><span class="line">console.log(<span class="string">'arr = '</span>+arr);</span><br><span class="line">console.log(arr.length);</span><br><span class="line">console.log(<span class="string">'arr1 = '</span>+arr1);</span><br></pre></td></tr></table></figure>
+<p>输出结果:<img src="/img/js/pop.png" alt="pop()方法"><br>从输出结果中可以看出:调用方法后改变了原数组的长度，返回值是删除的最后一个元素</p>
+<h3 id="shift-方法"><a href="#shift-方法" class="headerlink" title="shift()方法"></a>shift()方法</h3><p><b>从数组中删除第一个元素，并返回该元素的值。<span style="color:#D93741;">此方法会改变原数组</span></b><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3];</span><br><span class="line">var arr1 = arr.shift();</span><br><span class="line">console.log(arr); //[2,3]</span><br><span class="line">console.log(arr1); //1</span><br></pre></td></tr></table></figure></p>
+<p>此方法和pop()类似，只是shift是删除数组第一个，pop是删除数组的最后一个</p>
+<blockquote>
+<p>为什么先介绍这四个方法呢？<br>这四个方法的用法比较相似，也比较常用，成对记比较好记。<br>添加元素的push和unshift方法，返回值都是数组的长度。<br>删除元素的pop和shift方法，返回值都是删除的元素</p>
+</blockquote>
+<p style="color:red">注:若在空数组上调用pop()方法或者shift()方法，返回值为undefined</p>
+
+<h3 id="reverse-方法"><a href="#reverse-方法" class="headerlink" title="reverse()方法"></a>reverse()方法</h3><p><b>将数组中元素的位置颠倒 即:倒序输出，将数组的最后一个元素作为第一个.<span style="color:#D93741;">此方法会改变原数组</span></b><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5];</span><br><span class="line">var arr1 = arr.reverse();</span><br><span class="line">console.log(arr);</span><br><span class="line">console.log(arr1);</span><br></pre></td></tr></table></figure></p>
+<p>输出结果:<img src="/img/js/reverse.png" alt="reverse()方法"><br>reverse()方法的返回值是新数组，原数组的值也指向新数组。</p>
+<h3 id="join-方法"><a href="#join-方法" class="headerlink" title="join()方法"></a>join()方法</h3><p><b>将数组或者伪数组的所有元素用分隔符连接到一个字符串中。<span style="color:#D93741;">此方法不会改变原数组</span></b></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr = [<span class="string">'刘备'</span>,<span class="string">'关羽'</span>,<span class="string">'张飞'</span>];</span><br><span class="line">var arr1 = arr.join();</span><br><span class="line">var arr2 = arr.join(<span class="string">' '</span>);</span><br><span class="line">var arr3 = arr.join(<span class="string">'-'</span>);  </span><br><span class="line">console.log(arr); </span><br><span class="line">console.log(arr1); </span><br><span class="line">console.log(arr2); </span><br><span class="line">console.log(arr3);</span><br></pre></td></tr></table></figure>
+<p>输出结果:<img src="/img/js/join.png" alt="join()方法"></p>
+<p>join()方法有一个参数，指定一个字符串来分隔数组的每个元素。</p>
+<ul>
+<li>如果省略参数，数组元素默认用逗号分隔</li>
+<li><p>若传入空字符串(‘’)，则元素之间没有任何字符，例<br><img src="/img/js/join2.png" alt="join2"></p>
+</li>
+<li><p>若数组arr.length为0即空数组，则arr.join()的返回值为空字符串</p>
+</li>
+</ul>
+<h3 id="slice-方法"><a href="#slice-方法" class="headerlink" title="slice()方法"></a>slice()方法</h3><p><b>返回一个从开始到结束(不包括结束)选择的数组的一部分浅拷贝到一个新数组对象。<span style="color:#D93741;">此方法不会改变原数组</span></b><br>简单的说就是截取数组的一部分，返回值是截取的部分</p>
+<p><strong>看个例子:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [<span class="string">'看'</span>,<span class="string">'我'</span>,<span class="string">'好'</span>,<span class="string">'看'</span>,<span class="string">'吗'</span>];</span><br><span class="line">var sliced = arr.slice(1,4);</span><br><span class="line">console.log(arr);</span><br><span class="line">console.log(sliced);</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：<img src="/img/js/slice.png" alt="slice()方法"><br>从输出结果上可以看出，截取部分是从下标为1的位置开始，截取到下标为4的位置，但是不包括下标为4的元素。其返回值就是截取的部分，原数组未发生变化</p>
+<p><b>参数的传入:</b></p>
+<ol>
+<li>arr.slice() 不传入参数，则返回整个数组 取值范围：[0,end]</li>
+<li>arr.slice(begin) 传入一个参数，则从begin下标截取到数组结束 取值范围：[begin,end]</li>
+<li>arr.slice(begin,end); 取值范围：[begin,end)</li>
+<li><span style="color:red;">slice的参数可以为负数，当参数为负数时，表示在原数组中的倒数第几个元素开始抽取。例：slice(-2，-1)表示抽取了原数组中的倒数第二个元素到最后一个元素，同样不包括最后一个元素</span><br><img src="/img/js/slice2.png" alt="slice2"></li>
+</ol>
+<h3 id="splice-方法"><a href="#splice-方法" class="headerlink" title="splice()方法"></a>splice()方法</h3><p><b>通过删除现有元素或添加新元素来更改一个数组的内容。可以实现数组元素的添加，删除，修改。<span style="color:#D93741;">此方法直接对原数组操作</span></b></p>
+<p><strong>先来个例子:</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5];</span><br><span class="line">var arr1 = arr.splice(2,0,<span class="string">'6'</span>);</span><br><span class="line">console.log(arr); // [1, 2, <span class="string">"6"</span>, 3, 4, 5]</span><br><span class="line">console.log(arr1); // []</span><br><span class="line">var arr2 = arr.splice(2,1);</span><br><span class="line">console.log(arr2);// [<span class="string">"6"</span>]</span><br><span class="line">console.log(arr); // [1,2,3,4,5]</span><br><span class="line">var arr3 = arr.splice(-1,1);</span><br><span class="line">console.log(arr3); // [5]</span><br><span class="line">console.log(arr); // [1,2,3,4]</span><br></pre></td></tr></table></figure></p>
+<p>输出结果:<img src="/img/js/splice.png" alt="splice"></p>
+<p><strong>参数:</strong><br>splice(begin,deleteCount,element1,…)</p>
+<ol>
+<li>如果不传入参数，返回值是空数组</li>
+<li>第一个参数是修改的开始位置，以下标为准(从0计数)，如果超出了数组的长度，则在数组末尾添加内容;如果是负值，则表示从数组末尾开始的第几位（从1计数）</li>
+<li>第二个参数是删除的个数。<br>如果为0，则不删除元素，这种情况下，至少应添加一个新元素。<br>如果deleteCount大于begin后面的元素总数，则begin后面的元素全都被删除。<br>如果deleteCount被省略，则其值相当于(arr.length-begin),即从begin开始删除到数组结尾</li>
+<li>第三个参数是要添加到数组的元素，从start位置开始，如果不指定，则splice()将只删除数组元素</li>
+</ol>
+<p>返回值: 如果有删除元素，则返回删除元素组成的新数组。如果没有删除元素，则返回空数组。添加元素的返回值就是空数组。</p>
+<p><span style="color:#D93741;">注：splice() 方法与 slice() 方法的作用是不同的，splice() 方法会直接对数组进行修改。</span></p>
+<h3 id="toString-方法"><a href="#toString-方法" class="headerlink" title="toString()方法"></a>toString()方法</h3><p><b>返回一个字符串，表示指定的数组及其元素。无参数。<span style="color:#D93741;">此方法不会改变原数组</span></b></p>
+<p>例:<img src="/img/js/toString.png" alt="toString"></p>
+<h3 id="indexOf-方法"><a href="#indexOf-方法" class="headerlink" title="indexOf()方法"></a>indexOf()方法</h3><p><b>返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1</b><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2,9,7,8,9];</span><br><span class="line">arr.indexOf(2);  //0 数组中2所在位置的下标</span><br><span class="line">arr.indexOf(9);  //1  如果数组中有两个相同的元素，则返回此元素第一次出现的位置的下标。</span><br><span class="line">arr.indexOf(5);  //-1 元素不存在返回-1</span><br></pre></td></tr></table></figure></p>
+<p><b>参数:</b></p>
+<ol>
+<li>第一个参数是需要查找的元素</li>
+<li>第二个参数是指定开始查找的位置,如果是负数，则表示从后面第几位开始往后找<br>例：<img src="/img/js/indexOf.png" alt="indexOf"></li>
+</ol>
+<h3 id="lastIndexOf-方法"><a href="#lastIndexOf-方法" class="headerlink" title="lastIndexOf()方法"></a>lastIndexOf()方法</h3><p><b>与indexOf相反，此方法是从后往前找（从1开始计数），返回值是查找元素所在位置的索引;如果元素不存在,则返回-1</b><br><span style="color:red;">参数2表示从指定位置开始逆向查找。如果是负值，数组是从后往前找的，不逆向(有点难理解，多练几遍就好了，博主脑子笨，脑袋转了好久呢)</span><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2, 5, 9, 2];</span><br><span class="line">var index = arr.lastIndexOf(2);</span><br><span class="line">console.log(index); // 3</span><br><span class="line">var index1 = arr.lastIndexOf(2,3);</span><br><span class="line">//找到索引为3的位置，向前找</span><br><span class="line">console.log(index1); // 3</span><br><span class="line">var index2 = arr.lastIndexOf(2,2);</span><br><span class="line">console.log(index2); // 0</span><br><span class="line">var index3 = arr.lastIndexOf(2,-2);</span><br><span class="line">//从后往前找到-2的位置，即从9在的位置往前找</span><br><span class="line">console.log(index3); // 0</span><br><span class="line">var index4 = arr.lastIndexOf(2,-1);</span><br><span class="line">console.log(index4); // 3</span><br></pre></td></tr></table></figure></p>
+<h3 id="forEach-方法"><a href="#forEach-方法" class="headerlink" title="forEach()方法"></a>forEach()方法</h3><p><b>此方法比较重要，遍历数组的方法</b><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2,3,5,8];</span><br><span class="line">arr.forEach(<span class="keyword">function</span>(ele)&#123;</span><br><span class="line">  console.log(ele);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>输出结果:<img src="/img/js/forEach.png" alt="forEach"></p>
+<p><b>语法及参数:</b><br>语法:</p>
+<blockquote>
+<p>arr.forEach(fn(currentValue,index,array){<br>     //do something<br>},this)<br>arr.forEach(fn[,thisArg])</p>
+</blockquote>
+<p>参数：</p>
+<ol>
+<li><p>fn:执行函数，函数接收三个参数：</p>
+<ul>
+<li>currentValue:数组中正在处理的当前元素</li>
+<li>index:索引</li>
+<li>array:forEach()方法正在操作的数组。</li>
+</ul>
+</li>
+<li><p>thisArg:可选参数，当执行回调函数时用于this的值</p>
+</li>
+</ol>
+<p><span style="color:red">forEach()方法中this的指向是指向window,forEach传入的this参数可以改变this的指向</span><br>this指向这个问题很难搞，大家这里先了解一下，之后也许我会详细总结一下。</p>
+<p>至此，数组的方法总结结束了，当然这只是常用的一些方法，数组的方法还有好多，大家如果有兴趣的话，可以查找<a href="https://developer.mozilla.org/zh" target="_blank" rel="noopener">MDN</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/13/更换Hexo主题/" rel="next" title="更换Hexo主题">
+                <i class="fa fa-chevron-left"></i> 更换Hexo主题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/31/JS中数组和字符串的常用方法（二）/" rel="prev" title="JS中数组和字符串的常用方法（二）">
+                JS中数组和字符串的常用方法（二） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=2142766" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUxNC83MDY4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="/images/headIcon.png"
+              alt="Y刺猬菇凉" />
+          
+            <p class="site-author-name" itemprop="name">Y刺猬菇凉</p>
+            <p class="site-description motion-element" itemprop="description">html,css,js,Web前端开发工程师</p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/emilyzhao21" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="emily_zdy@163.com" target="_blank" title="E-Mail">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      E-Mail
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/aiya-26-98/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com" title="NexT使用文档" target="_blank">NexT使用文档</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的方法"><span class="nav-number">1.</span> <span class="nav-text">数组的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#push-方法"><span class="nav-number">1.1.</span> <span class="nav-text">push()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unshift-方法"><span class="nav-number">1.2.</span> <span class="nav-text">unshift()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop-方法"><span class="nav-number">1.3.</span> <span class="nav-text">pop()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shift-方法"><span class="nav-number">1.4.</span> <span class="nav-text">shift()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse-方法"><span class="nav-number">1.5.</span> <span class="nav-text">reverse()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#join-方法"><span class="nav-number">1.6.</span> <span class="nav-text">join()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#slice-方法"><span class="nav-number">1.7.</span> <span class="nav-text">slice()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#splice-方法"><span class="nav-number">1.8.</span> <span class="nav-text">splice()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toString-方法"><span class="nav-number">1.9.</span> <span class="nav-text">toString()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf-方法"><span class="nav-number">1.10.</span> <span class="nav-text">indexOf()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lastIndexOf-方法"><span class="nav-number">1.11.</span> <span class="nav-text">lastIndexOf()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach-方法"><span class="nav-number">1.12.</span> <span class="nav-text">forEach()方法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 &mdash; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Y刺猬菇凉</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.2</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
