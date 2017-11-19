@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://emilyzdy.top/img/git-bash.png">
 <meta property="og:image" content="http://emilyzdy.top/img/regedit.png">
-<meta property="og:updated_time" content="2017-11-17T15:34:53.067Z">
+<meta property="og:updated_time" content="2017-11-19T08:49:46.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重装Git后，Git bash Here 和 Git GUI here 失效的解决方法">
 <meta name="twitter:description" content="今天手贱的重装了最新版的Git，结果鼠标右键菜单里面的Git Bash Here和Git GUI Here 失效了(后来才发现只是在桌面上无法显示在文件夹中右键打开还是可以的)主要原因就是:注册表里面的错误,command中的数值数据追加了一些东西 win+R打开运行对话框，输入regedit（博主习惯性的老是输入register，哈哈~~）打开注册表，找到   HKEY_LOCAL_MACHIN">
@@ -183,7 +183,7 @@ var _hmt = _hmt || [];
       
         <div class="article-entry" itemprop="articleBody">
           
-                    <p>今天手贱的重装了最新版的Git，结果鼠标右键菜单里面的Git Bash Here和Git GUI Here 失效了(后来才发现只是在桌面上无法显示在文件夹中右键打开还是可以的)<br><img src="/img/git-bash.png" alt="git-bash"><br>主要原因就是:注册表里面的错误,command中的数值数据追加了一些东西<br><img src="/img/regedit.png" alt="regedit"></p>
+                    <p><div style="margin-bottom:5px;"></div><br>今天手贱的重装了最新版的Git，结果鼠标右键菜单里面的Git Bash Here和Git GUI Here 失效了(后来才发现只是在桌面上无法显示在文件夹中右键打开还是可以的)<br><img src="/img/git-bash.png" alt="git-bash"><br>主要原因就是:注册表里面的错误,command中的数值数据追加了一些东西<br><img src="/img/regedit.png" alt="regedit"></p>
 <p>win+R打开运行对话框，输入regedit（博主习惯性的老是输入register，哈哈~~）打开注册表，找到 </p>
 <ol>
 <li>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\git_gui\command，修改数据，一般都是后面多加了一些东西，去掉就行了，改成例如：”E:\web\github\Git\cmd\git-gui.exe” 修改为你自己的路径就行了</li>

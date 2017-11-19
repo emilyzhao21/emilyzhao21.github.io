@@ -8,18 +8,23 @@
   <link rel="dns-prefetch" href="http://emilyzdy.top">
   <title>SVN的使用 | Y刺猬菇凉</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="html,css,js,Web前端开发工程师">
+  <meta name="description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。 三、SVN的操作使用 1.从远程服务器下载项">
 <meta name="keywords" content="svn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SVN的使用">
 <meta property="og:url" content="http://emilyzdy.top/2016/04/23/SVN的使用/index.html">
 <meta property="og:site_name" content="Y刺猬菇凉">
-<meta property="og:description" content="html,css,js,Web前端开发工程师">
+<meta property="og:description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。 三、SVN的操作使用 1.从远程服务器下载项目到本地目录(SVN checkout)     1) 新建或进入要存放项目的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-18T16:35:54.778Z">
+<meta property="og:image" content="http://emilyzdy.top/img/svn/right.png">
+<meta property="og:image" content="http://emilyzdy.top/img/svn/checkout.png">
+<meta property="og:image" content="http://emilyzdy.top/img/svn/checkoutFinished.png">
+<meta property="og:image" content="http://emilyzdy.top/img/svn/commit.jpg">
+<meta property="og:updated_time" content="2017-11-19T14:32:42.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVN的使用">
-<meta name="twitter:description" content="html,css,js,Web前端开发工程师">
+<meta name="twitter:description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。 三、SVN的操作使用 1.从远程服务器下载项目到本地目录(SVN checkout)     1) 新建或进入要存放项目的">
+<meta name="twitter:image" content="http://emilyzdy.top/img/svn/right.png">
   
     <link rel="alternative" href="/atom.xml" title="Y刺猬菇凉" type="application/atom+xml">
   
@@ -180,7 +185,21 @@ var _hmt = _hmt || [];
       
         <div class="article-entry" itemprop="articleBody">
           
-                    
+                    <p><div style="margin-bottom:5px;"></div></p>
+<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。<a href="https://baike.baidu.com/item/SVN/3311103?fr=aladdin" target="_blank" rel="noopener">来自于百度百科</a></p>
+<h2 id="二、SVN的下载安装"><a href="#二、SVN的下载安装" class="headerlink" title="二、SVN的下载安装"></a>二、SVN的下载安装</h2><p><a href="https://tortoisesvn.net/" target="_blank" rel="noopener">svn官网</a><br>安装完成后，在空白处按下鼠标右键，会看到如下界面：<br><img src="/img/svn/right.png" alt="右键快捷方式"><br>此时说明SVN已经安装成功了。</p>
+<h2 id="三、SVN的操作使用"><a href="#三、SVN的操作使用" class="headerlink" title="三、SVN的操作使用"></a>三、SVN的操作使用</h2><p><strong> 1.从远程服务器下载项目到本地目录(SVN checkout) </strong><br>    1) 新建或进入要存放项目的目录，右键-&gt;SVN checkout<br>    2) URL of repository填写线上仓库路径即可<br>    3) Revision处，”HEAD revision”是指最新版，也可以指定Revision为任意一个版本<br>    <img src="/img/svn/checkout.png" alt="checkout"><br>    4) 点击OK，在弹出的对话框输入用户名和密码，验证成功后，项目文件开始从远程服务器下载到本地工作目录中<br>    5) 点击“确定”后，即可获取完成，出现checkout finished的界面<br>    <img src="/img/svn/checkoutFinished.png" alt="finished"></p>
+<p><strong> 2.更新文件(SVN update) </strong><br>    当远程仓库有更新时，可以选择目录文件夹，右键选择SVN update，以同步远程仓库所做的修改</p>
+<p><strong> 3.提交更新(SVN Commit) </strong><br>    1) 本地修改文件后，若是需要更新到服务器上，则右键选择SVN Commit来进行更新<br>    </p><p style="color:red">commit使用之前，要先update一下，以确保文件夹内容是最新的</p><br>    2) 选择SVN Commit，会出现一下界面<br>    <img src="/img/svn/commit.jpg" alt="commit"><br>    选中你要上传的文件，<p></p>
+<p><strong> 4.增加文件(Add) </strong><br>    1) 将需要增加的文件放到项目文件夹下，右键选择TortoiseSVN-&gt;Add，添加文件<br>    2) 添加后右击选择SVN Commit，将新文件上传到</p>
+<p><strong> 5.检查更新(check for modifications) </strong><br>    此功能可以显示本地对文件所做的修改有哪些还没有提交。不光是看到对文件的修改，还包括增加文件和目录，删除文件和目录，移动文件和目录等。当其他组员对文件做了改动后，可以使用此命令项来查询</p>
+<p><strong> 6.删除文件(Delete) </strong><br>    选中要删除的文件，右键选择TortoiseSVN-&gt;Delete，然后SVN Commit，同步到远程仓库</p>
+<p><strong> 7.重命名文件(Rname) </strong></p>
+<p><strong> 8.获取日志(show log) </strong><br>    获取修改的具体操作</p>
+<p><strong> 9.撤销更改(Revert) </strong><br>    在修改文件但文件未提交到远程仓库时，需要返回到修改前的状态，右键选择TortoiseSVN-&gt;Revert进行撤销，本地硬盘上的文件恢复到修改前的状态，修改的内容被删除</p>
+<p><strong> 10.锁定和解锁(Get lock and Release lock) </strong><br>    当项目需要时可以在本地磁盘中将迁出的内容进行锁定，选中要被锁定的文件右键选择TortoiseSVN-&gt;Get lock进行锁定，锁定后无法修改此文件，系统弹出锁定信息框。当文本文件锁定后，需要通过解锁他人才能继续对文件进行修改。<br>    解锁：右键选择TortoiseSVN-&gt;Release lock进行解锁</p>
+<p>这些是客户端的操作方法，之后会更新一下命令行的操作方式哦！ OVER~~~</p>
+
                       
 
                         
