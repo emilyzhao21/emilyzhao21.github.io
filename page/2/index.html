@@ -159,6 +159,194 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JS中数组和字符串的常用方法（二）" class="article article-type-post  article-index"
+  itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/28/JS中数组和字符串的常用方法（二）/">JS中数组和字符串的常用方法（二）</a>
+    </h1>
+  
+
+          
+            <a href="/2015/11/28/JS中数组和字符串的常用方法（二）/" class="archive-article-date">
+  	<time datetime="2015-11-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-28</time>
+</a>
+              
+      </header>
+      
+        <div class="article-entry" itemprop="articleBody">
+          
+            <p><div style="margin-bottom:5px;"></div><br>昨天总结了数组的方法，今天安利一下字符串常用的方法，一般数组方法和字符串方法都是结合使用的，先将基础方法总结一下，利于使用。之后会给大家安利一下关于这方面的面试题。</p>
+<h2 id="字符串的方法"><a href="#字符串的方法" class="headerlink" title="字符串的方法"></a>字符串的方法</h2><h3 id="split-方法"><a href="#split-方法" class="headerlink" title="split()方法"></a>split()方法</h3><p><strong>使用指定的分隔符字符串将一个String对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置</strong><br><strong>参数:</strong></p>
+<ol>
+<li>字符串中存在的分隔符，在有此分隔符的地方进行分隔<br>例:<img src="/img/js/split.png" alt="split">
+              
+                <a class="article-more-a" href="/2015/11/28/JS中数组和字符串的常用方法（二）/#more">
+                  more >></a>
+                
+                  
+
+                        
+        </div>
+        <div class="article-info article-info-index">
+          
+              
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JS//" class="article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+                  
+                    <p class="article-more-link">
+                      <a class="article-more-a" href="/2015/11/28/JS中数组和字符串的常用方法（二）/">
+                        展开全文 >></a>
+                    </p>
+                    
+
+                      
+						  
+                            <div class="clearfix"></div>
+        </div>
+  </div>
+</article>
+
+      <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+        
+
+  
+    <article id="post-JS中数组和字符串的常用方法（一）" class="article article-type-post  article-index"
+  itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/14/JS中数组和字符串的常用方法（一）/">JS中数组和字符串的常用方法（一）</a>
+    </h1>
+  
+
+          
+            <a href="/2015/11/14/JS中数组和字符串的常用方法（一）/" class="archive-article-date">
+  	<time datetime="2015-11-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-14</time>
+</a>
+              
+      </header>
+      
+        <div class="article-entry" itemprop="articleBody">
+          
+            <p><div style="margin-bottom:5px;"></div><br>(⊙o⊙)…，又过了这么久才更博，博主最近在JS字符串和数组方法的使用上进坑了，那么今天就总结下这些方法的使用，自己加深下印象，也给你们一个参考。</p>
+<h2 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h2><h3 id="push-方法"><a href="#push-方法" class="headerlink" title="push()方法"></a>push()方法</h3><p><b>将一个或多个元素添加到数组的末尾，并返回数组的新长度。 <span style="color:#D93741;">此方法会改变原数组</span></b></p>
+<p>定义一个新数组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr=[];</span><br><span class="line">var arr1=arr.push(<span class="string">'123'</span>);</span><br><span class="line">console.log(arr); //[<span class="string">'123'</span>]</span><br><span class="line">console.log(arr1); //1 push()方法的返回值</span><br></pre></td></tr></table></figure></p>
+<p>输出结果:<img src="/img/js/push.png" alt="push()方法"><br>这时arr数组就变成了[‘123’],改变了原数组的长度。length是数组的一个属性，返回值是数组的长度。<br>
+              
+                <a class="article-more-a" href="/2015/11/14/JS中数组和字符串的常用方法（一）/#more">
+                  more >></a>
+                
+                  
+
+                        
+        </div>
+        <div class="article-info article-info-index">
+          
+              
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JS//" class="article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+                  
+                    <p class="article-more-link">
+                      <a class="article-more-a" href="/2015/11/14/JS中数组和字符串的常用方法（一）/">
+                        展开全文 >></a>
+                    </p>
+                    
+
+                      
+						  
+                            <div class="clearfix"></div>
+        </div>
+  </div>
+</article>
+
+      <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+        
+
+  
     <article id="post-vscode Insider中常用的插件" class="article article-type-post  article-index"
   itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -225,6 +413,7 @@ var _hmt = _hmt || [];
                     
 
                       
+						  
                             <div class="clearfix"></div>
         </div>
   </div>
@@ -317,6 +506,7 @@ var _hmt = _hmt || [];
                     
 
                       
+						  
                             <div class="clearfix"></div>
         </div>
   </div>
@@ -342,7 +532,7 @@ var _hmt = _hmt || [];
         
 
   
-    <article id="post-更换Hexo主题" class="article article-type-post  article-index"
+    <article id="post-更换Hexo主题NEXT" class="article article-type-post  article-index"
   itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -350,12 +540,12 @@ var _hmt = _hmt || [];
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/13/更换Hexo主题/">更换Hexo主题</a>
+      <a class="article-title" href="/2015/09/13/更换Hexo主题NEXT/">更换Hexo主题--Next</a>
     </h1>
   
 
           
-            <a href="/2015/09/13/更换Hexo主题/" class="archive-article-date">
+            <a href="/2015/09/13/更换Hexo主题NEXT/" class="archive-article-date">
   	<time datetime="2015-09-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-13</time>
 </a>
               
@@ -366,7 +556,7 @@ var _hmt = _hmt || [];
             <p><div style="margin-bottom:5px;"></div><br>  博主使用的是NexT主题，在页面最后也有显示<br>  <img src="/img/footer.png" alt="&quot;footer&quot;"><br>  这个主题比较简洁，看起来比原来的主题好看的太多了，所以见它的第一眼就深深的被它吸引了，哈哈。。。<br>  那么，接下来博主就介绍一下，怎么修改主题：</p>
 <h3 id="下载NexT主题"><a href="#下载NexT主题" class="headerlink" title="下载NexT主题"></a>下载NexT主题</h3><p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a><br>
               
-                <a class="article-more-a" href="/2015/09/13/更换Hexo主题/#more">
+                <a class="article-more-a" href="/2015/09/13/更换Hexo主题NEXT/#more">
                   more >></a>
                 
                   
@@ -402,107 +592,13 @@ var _hmt = _hmt || [];
 
                   
                     <p class="article-more-link">
-                      <a class="article-more-a" href="/2015/09/13/更换Hexo主题/">
+                      <a class="article-more-a" href="/2015/09/13/更换Hexo主题NEXT/">
                         展开全文 >></a>
                     </p>
                     
 
                       
-                            <div class="clearfix"></div>
-        </div>
-  </div>
-</article>
-
-      <aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-        
-
-  
-    <article id="post-如何使用Hexo+Github建立博客" class="article article-type-post  article-index"
-  itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/12/如何使用Hexo+Github建立博客/">如何使用Hexo+Github建立自己的博客</a>
-    </h1>
-  
-
-          
-            <a href="/2015/09/12/如何使用Hexo+Github建立博客/" class="archive-article-date">
-  	<time datetime="2015-09-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-12</time>
-</a>
-              
-      </header>
-      
-        <div class="article-entry" itemprop="articleBody">
-          
-            <p><div style="margin-bottom:5px;"></div><br>历时两天，博主终于将博客弄好了，可谓一路艰辛，错误重重。那么第一篇博客就来记录一下安装的过程及问题，也希望对你们能有所帮助。</p>
-<h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><ul>
-<li>Git </li>
-<li>node.js</li>
-<li>可以在win+R 打开cmd命令界面,分别输入git –version命令和node -v 查看版本信息,看是否安装。<br>这两个东西在网上都可以下载,博主在这里就不添加链接了。 “傻瓜式”（直接下一步）安装就可以了</li>
-</ul>
-              
-                <a class="article-more-a" href="/2015/09/12/如何使用Hexo+Github建立博客/#more">
-                  more >></a>
-                
-                  
-
-                        
-        </div>
-        <div class="article-info article-info-index">
-          
-              
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-                
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-                  
-                    <p class="article-more-link">
-                      <a class="article-more-a" href="/2015/09/12/如何使用Hexo+Github建立博客/">
-                        展开全文 >></a>
-                    </p>
-                    
-
-                      
+						  
                             <div class="clearfix"></div>
         </div>
   </div>
@@ -530,7 +626,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -655,6 +751,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">svn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hexo博客</a>
               </li>
             
             <div class="clearfix"></div>
