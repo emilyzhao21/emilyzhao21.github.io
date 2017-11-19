@@ -8,22 +8,22 @@
   <link rel="dns-prefetch" href="http://emilyzdy.top">
   <title>SVN的使用 | Y刺猬菇凉</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。 三、SVN的操作使用 1.从远程服务器下载项">
+  <meta name="description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。">
 <meta name="keywords" content="svn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SVN的使用">
 <meta property="og:url" content="http://emilyzdy.top/2016/04/23/SVN的使用/index.html">
 <meta property="og:site_name" content="Y刺猬菇凉">
-<meta property="og:description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。 三、SVN的操作使用 1.从远程服务器下载项目到本地目录(SVN checkout)     1) 新建或进入要存放项目的">
+<meta property="og:description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://emilyzdy.top/img/svn/right.png">
 <meta property="og:image" content="http://emilyzdy.top/img/svn/checkout.png">
 <meta property="og:image" content="http://emilyzdy.top/img/svn/checkoutFinished.png">
 <meta property="og:image" content="http://emilyzdy.top/img/svn/commit.jpg">
-<meta property="og:updated_time" content="2017-11-19T14:32:42.208Z">
+<meta property="og:updated_time" content="2017-11-19T14:44:53.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVN的使用">
-<meta name="twitter:description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。 三、SVN的操作使用 1.从远程服务器下载项目到本地目录(SVN checkout)     1) 新建或进入要存放项目的">
+<meta name="twitter:description" content="一、简介SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。来自于百度百科 二、SVN的下载安装svn官网安装完成后，在空白处按下鼠标右键，会看到如下界面：此时说明SVN已经安装成功了。">
 <meta name="twitter:image" content="http://emilyzdy.top/img/svn/right.png">
   
     <link rel="alternative" href="/atom.xml" title="Y刺猬菇凉" type="application/atom+xml">
@@ -188,6 +188,7 @@ var _hmt = _hmt || [];
                     <p><div style="margin-bottom:5px;"></div></p>
 <h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>SVN是Subversion的简称，是一个开放源代码的版本控制系统，相较于RCS、CVS，它采用了分支管理系统，它的设计目标就是取代CVS。<a href="https://baike.baidu.com/item/SVN/3311103?fr=aladdin" target="_blank" rel="noopener">来自于百度百科</a></p>
 <h2 id="二、SVN的下载安装"><a href="#二、SVN的下载安装" class="headerlink" title="二、SVN的下载安装"></a>二、SVN的下载安装</h2><p><a href="https://tortoisesvn.net/" target="_blank" rel="noopener">svn官网</a><br>安装完成后，在空白处按下鼠标右键，会看到如下界面：<br><img src="/img/svn/right.png" alt="右键快捷方式"><br>此时说明SVN已经安装成功了。</p>
+<a id="more"></a>
 <h2 id="三、SVN的操作使用"><a href="#三、SVN的操作使用" class="headerlink" title="三、SVN的操作使用"></a>三、SVN的操作使用</h2><p><strong> 1.从远程服务器下载项目到本地目录(SVN checkout) </strong><br>    1) 新建或进入要存放项目的目录，右键-&gt;SVN checkout<br>    2) URL of repository填写线上仓库路径即可<br>    3) Revision处，”HEAD revision”是指最新版，也可以指定Revision为任意一个版本<br>    <img src="/img/svn/checkout.png" alt="checkout"><br>    4) 点击OK，在弹出的对话框输入用户名和密码，验证成功后，项目文件开始从远程服务器下载到本地工作目录中<br>    5) 点击“确定”后，即可获取完成，出现checkout finished的界面<br>    <img src="/img/svn/checkoutFinished.png" alt="finished"></p>
 <p><strong> 2.更新文件(SVN update) </strong><br>    当远程仓库有更新时，可以选择目录文件夹，右键选择SVN update，以同步远程仓库所做的修改</p>
 <p><strong> 3.提交更新(SVN Commit) </strong><br>    1) 本地修改文件后，若是需要更新到服务器上，则右键选择SVN Commit来进行更新<br>    </p><p style="color:red">commit使用之前，要先update一下，以确保文件夹内容是最新的</p><br>    2) 选择SVN Commit，会出现一下界面<br>    <img src="/img/svn/commit.jpg" alt="commit"><br>    选中你要上传的文件，<p></p>
