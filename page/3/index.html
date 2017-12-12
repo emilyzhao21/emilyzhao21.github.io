@@ -159,6 +159,377 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JS中数组和字符串的常用方法（一）" class="article article-type-post  article-index"
+  itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/14/JS中数组和字符串的常用方法（一）/">JS中数组和字符串的常用方法（一）</a>
+    </h1>
+  
+
+          
+            <a href="/2015/11/14/JS中数组和字符串的常用方法（一）/" class="archive-article-date">
+  	<time datetime="2015-11-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-14</time>
+</a>
+              
+      </header>
+      
+        <div class="article-entry" itemprop="articleBody">
+          
+            <p><div style="margin-bottom:5px;"></div><br>(⊙o⊙)…，又过了这么久才更博，博主最近在JS字符串和数组方法的使用上进坑了，那么今天就总结下这些方法的使用，自己加深下印象，也给你们一个参考。</p>
+<h2 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h2><h3 id="push-方法"><a href="#push-方法" class="headerlink" title="push()方法"></a>push()方法</h3><p><b>将一个或多个元素添加到数组的末尾，并返回数组的新长度。 <span style="color:#D93741;">此方法会改变原数组</span></b></p>
+<p>定义一个新数组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr=[];</span><br><span class="line">var arr1=arr.push(<span class="string">'123'</span>);</span><br><span class="line">console.log(arr); //[<span class="string">'123'</span>]</span><br><span class="line">console.log(arr1); //1 push()方法的返回值</span><br></pre></td></tr></table></figure></p>
+<p>输出结果:<img src="/img/js/push.png" alt="push()方法"><br>这时arr数组就变成了[‘123’],改变了原数组的长度。length是数组的一个属性，返回值是数组的长度。<br>
+              
+                <a class="article-more-a" href="/2015/11/14/JS中数组和字符串的常用方法（一）/#more">
+                  more >></a>
+                
+                  
+
+                        
+        </div>
+        <div class="article-info article-info-index">
+          
+              
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JS//" class="article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+                  
+                    <p class="article-more-link">
+                      <a class="article-more-a" href="/2015/11/14/JS中数组和字符串的常用方法（一）/">
+                        展开全文 >></a>
+                    </p>
+                    
+
+                      
+						  
+                            <div class="clearfix"></div>
+        </div>
+  </div>
+</article>
+
+      <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+        
+
+  
+    <article id="post-vscode Insider中常用的插件" class="article article-type-post  article-index"
+  itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/31/vscode Insider中常用的插件/">常用的前端IDE以及Visual Studio Code Insider中常用的插件</a>
+    </h1>
+  
+
+          
+            <a href="/2015/10/31/vscode Insider中常用的插件/" class="archive-article-date">
+  	<time datetime="2015-10-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-31</time>
+</a>
+              
+      </header>
+      
+        <div class="article-entry" itemprop="articleBody">
+          
+            <p><div style="margin-bottom:5px;"></div><br>额…好久没有更博了。今天好像是个虐”狗”的节日，不过没关系，博主不出门，哼，眼不见为静…<br>工欲善其事，必先利其器。最近博主发现了一款”神器”，是什么呢？就是Visual Studio Code Insider了。<br>自从博主接触前端以来，用遍了所有的IDE(有点夸张)，例如Sublime,webstrom,IntelliJ IDEA,HBuilder，Visual Studio Code这几个。<br>Sublime是轻量级的，很好用，很好入门，所以刚开始学前端的时候，可以使用这个，那么后来呢？就是接触了重量级的webstrom和IntelliJ IDEA，里面有丰富的插件，IntelliJ IDEA比webstrom的功能更全，缺点就是打开速度太慢，就博主的电脑而言，实在是受不了，HBuilder安装使用后，不太喜欢主题风格，大部分都是明亮的色调，博主还是喜欢暗色调多一些，不过它的代码提示确实挺好用的，所以后来了解到了vscode Insider(和vscode差不多，博主都用过)。它有各式各样的插件，有人说是进阶版的Atom，但是博主没有接触过这个东西，所以不太了解，不过VScode确实好用。</p>
+<p>废话说了那么多，接下来就介绍一下博主使用的一些基础插件吧。<br>
+              
+                <a class="article-more-a" href="/2015/10/31/vscode Insider中常用的插件/#more">
+                  more >></a>
+                
+                  
+
+                        
+        </div>
+        <div class="article-info article-info-index">
+          
+              
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IDE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/IDE//" class="article-tag-list-link color4">IDE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+                  
+                    <p class="article-more-link">
+                      <a class="article-more-a" href="/2015/10/31/vscode Insider中常用的插件/">
+                        展开全文 >></a>
+                    </p>
+                    
+
+                      
+						  
+                            <div class="clearfix"></div>
+        </div>
+  </div>
+</article>
+
+      <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+        
+
+  
+    <article id="post-重装Git后，Git bash Here 和 Git GUI here 失效的解决方法" class="article article-type-post  article-index"
+  itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/24/重装Git后，Git bash Here 和 Git GUI here 失效的解决方法/">重装Git后，Git bash Here 和 Git GUI here 失效的解决方法</a>
+    </h1>
+  
+
+          
+            <a href="/2015/10/24/重装Git后，Git bash Here 和 Git GUI here 失效的解决方法/" class="archive-article-date">
+  	<time datetime="2015-10-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-24</time>
+</a>
+              
+      </header>
+      
+        <div class="article-entry" itemprop="articleBody">
+          
+                    <p><div style="margin-bottom:5px;"></div><br>今天手贱的重装了最新版的Git，结果鼠标右键菜单里面的Git Bash Here和Git GUI Here 失效了(后来才发现只是在桌面上无法显示在文件夹中右键打开还是可以的)<br><img src="/img/git-bash.png" alt="git-bash"><br>主要原因就是:注册表里面的错误,command中的数值数据追加了一些东西<br><img src="/img/regedit.png" alt="regedit"></p>
+<p>win+R打开运行对话框，输入regedit（博主习惯性的老是输入register，哈哈~~）打开注册表，找到 </p>
+<ol>
+<li>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\git_gui\command，修改数据，一般都是后面多加了一些东西，去掉就行了，改成例如：”E:\web\github\Git\cmd\git-gui.exe” 修改为你自己的路径就行了</li>
+<li>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\background\shell\git_shell\command 改成例如：”E:\web\github\Git\git-bash.exe”修改为你自己的路径就行了</li>
+</ol>
+
+                      
+
+                        
+        </div>
+        <div class="article-info article-info-index">
+          
+              
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">疑难问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/疑难问题//" class="article-tag-list-link color5">疑难问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+                  
+                    <p class="article-more-link">
+                      <a class="article-more-a" href="/2015/10/24/重装Git后，Git bash Here 和 Git GUI here 失效的解决方法/">
+                        展开全文 >></a>
+                    </p>
+                    
+
+                      
+						  
+                            <div class="clearfix"></div>
+        </div>
+  </div>
+</article>
+
+      <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+        
+
+  
+    <article id="post-更换Hexo主题NEXT" class="article article-type-post  article-index"
+  itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/13/更换Hexo主题NEXT/">更换Hexo主题--Next</a>
+    </h1>
+  
+
+          
+            <a href="/2015/09/13/更换Hexo主题NEXT/" class="archive-article-date">
+  	<time datetime="2015-09-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-13</time>
+</a>
+              
+      </header>
+      
+        <div class="article-entry" itemprop="articleBody">
+          
+            <p><div style="margin-bottom:5px;"></div><br>  博主使用的是NexT主题，在页面最后也有显示<br>  <img src="/img/footer.png" alt="&quot;footer&quot;"><br>  这个主题比较简洁，看起来比原来的主题好看的太多了，所以见它的第一眼就深深的被它吸引了，哈哈。。。<br>  那么，接下来博主就介绍一下，怎么修改主题：</p>
+<h3 id="下载NexT主题"><a href="#下载NexT主题" class="headerlink" title="下载NexT主题"></a>下载NexT主题</h3><p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a><br>
+              
+                <a class="article-more-a" href="/2015/09/13/更换Hexo主题NEXT/#more">
+                  more >></a>
+                
+                  
+
+                        
+        </div>
+        <div class="article-info article-info-index">
+          
+              
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+                  
+                    <p class="article-more-link">
+                      <a class="article-more-a" href="/2015/09/13/更换Hexo主题NEXT/">
+                        展开全文 >></a>
+                    </p>
+                    
+
+                      
+						  
+                            <div class="clearfix"></div>
+        </div>
+  </div>
+</article>
+
+      <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+        
+
+  
     <article id="post-如何使用Hexo+Github建立博客" class="article article-type-post  article-index"
   itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -386,6 +757,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">hexo博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">教程、svn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SVN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">yii2.0</a>
               </li>
             
             <div class="clearfix"></div>
