@@ -16,16 +16,16 @@
 <meta property="og:site_name" content="Y刺猬菇凉">
 <meta property="og:description" content="创建API应用入口advanced模板的三个入口：console 控制台入口 backend 后台入口 frontend 前台入口单独创建API应用，目的是便于维护，可以避免以下问题：  配置的冲突 控制器的命名不变 url美化规则冲突   模拟客户端命令：1$ curl -i -H &quot;Accept:application/json&quot; &quot;http://api.apitpl.com/articles">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/03/第一个API应用/yii2/添加入口.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/03/第一个API应用/yii2/create.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/03/第一个API应用/yii2/crud.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/03/第一个API应用/yii2/controller.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/03/第一个API应用/yii2/success.png">
-<meta property="og:updated_time" content="2017-12-12T05:31:16.126Z">
+<meta property="og:image" content="http://emilyzdy.top/yii2/添加入口.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/create.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/crud.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/controller.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/success.png">
+<meta property="og:updated_time" content="2017-12-12T05:40:48.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一个api应用">
 <meta name="twitter:description" content="创建API应用入口advanced模板的三个入口：console 控制台入口 backend 后台入口 frontend 前台入口单独创建API应用，目的是便于维护，可以避免以下问题：  配置的冲突 控制器的命名不变 url美化规则冲突   模拟客户端命令：1$ curl -i -H &quot;Accept:application/json&quot; &quot;http://api.apitpl.com/articles">
-<meta name="twitter:image" content="http://emilyzdy.top/2017/12/03/第一个API应用/yii2/添加入口.png">
+<meta name="twitter:image" content="http://emilyzdy.top/yii2/添加入口.png">
   
     <link rel="alternative" href="/atom.xml" title="Y刺猬菇凉" type="application/atom+xml">
   
@@ -186,24 +186,24 @@ var _hmt = _hmt || [];
       
         <div class="article-entry" itemprop="articleBody">
           
-                    <h3 id="创建API应用入口"><a href="#创建API应用入口" class="headerlink" title="创建API应用入口"></a>创建API应用入口</h3><p>advanced模板的三个入口：<br>console 控制台入口 backend 后台入口 frontend 前台入口<br><img src="yii2/添加入口.png" alt="api入口"><br>单独创建API应用，目的是便于维护，可以避免以下问题：</p>
+                    <h3 id="创建API应用入口"><a href="#创建API应用入口" class="headerlink" title="创建API应用入口"></a>创建API应用入口</h3><p>advanced模板的三个入口：<br>console 控制台入口 backend 后台入口 frontend 前台入口<br><img src="/yii2/添加入口.png" alt="api入口"><br>单独创建API应用，目的是便于维护，可以避免以下问题：</p>
 <ul>
 <li>配置的冲突</li>
 <li>控制器的命名不变</li>
 <li>url美化规则冲突</li>
 </ul>
-<p><img src="yii2/create.png" alt="create"></p>
+<p><img src="/yii2/create.png" alt="create"></p>
 <p>模拟客户端命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -i -H <span class="string">"Accept:application/json"</span> <span class="string">"http://api.apitpl.com/articles"</span></span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h3 id="在apache设置httpd-vhosts-conf文件中添加api入口地址"><a href="#在apache设置httpd-vhosts-conf文件中添加api入口地址" class="headerlink" title="在apache设置httpd-vhosts.conf文件中添加api入口地址"></a>在apache设置httpd-vhosts.conf文件中添加api入口地址</h3><p></p><p style="color:red">注意：</p><p></p>
 <ol>
-<li>复制backend文件后，gii生成的model和curd的namespace都要是api目录下,例如：<br><img src="yii2/crud.png" alt="curd"></li>
-<li>修改生成的controller文件，例如：<br><img src="yii2/controller.png" alt="controller"></li>
+<li>复制backend文件后，gii生成的model和curd的namespace都要是api目录下,例如：<br><img src="/yii2/crud.png" alt="curd"></li>
+<li>修改生成的controller文件，例如：<br><img src="/yii2/controller.png" alt="controller"></li>
 <li>修改controllers文件夹下的siteController文件，将namespace修改为api\controllers</li>
 <li>在web文件夹下创建.htaccess文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Options +FollowSymLinks</span><br><span class="line">IndexIgnore */*</span><br><span class="line">RewriteEngine on</span><br><span class="line">RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">RewriteRule . index.php</span><br><span class="line">RewriteRule \.svn\/  /404.html</span><br><span class="line">RewriteRule \.git\/  /404.html</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>于是，终于成功了。<br><img src="yii2/success.png" alt="success"></p>
+<p>于是，终于成功了。<br><img src="/yii2/success.png" alt="success"></p>
 <p>以上是博主遇到的问题，可谓是困难重重，但庆幸最后终于成功了。努力<del>~</del>fighting！</p>
 
                       

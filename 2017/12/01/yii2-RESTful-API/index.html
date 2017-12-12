@@ -16,20 +16,20 @@
 <meta property="og:site_name" content="Y刺猬菇凉">
 <meta property="og:description" content="前言这两天在研究怎么在本地创建API接口进行项目Demo的开发，然后发现了Yii2 RESTful API的开发 composer的安装博主是通过composer安装的，如果想要使用其他的安装方法，可以查看yii2.0的文档文档如果还没有安装 Composer，你可以按 getcomposer.org 中的方法安装。 在 Linux 和 Mac OS X 中可以运行如下命令：12curl -sS">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/db.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/Apache.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/hosts.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/signup.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/giil.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/gii2.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/gii3.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/gii4.png">
-<meta property="og:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/gii5.png">
-<meta property="og:updated_time" content="2017-12-12T04:59:57.625Z">
+<meta property="og:image" content="http://emilyzdy.top/yii2/db.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/Apache.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/hosts.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/signup.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/giil.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/gii2.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/gii3.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/gii4.png">
+<meta property="og:image" content="http://emilyzdy.top/yii2/gii5.png">
+<meta property="og:updated_time" content="2017-12-12T05:41:39.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yii2 RESTful API 开发">
 <meta name="twitter:description" content="前言这两天在研究怎么在本地创建API接口进行项目Demo的开发，然后发现了Yii2 RESTful API的开发 composer的安装博主是通过composer安装的，如果想要使用其他的安装方法，可以查看yii2.0的文档文档如果还没有安装 Composer，你可以按 getcomposer.org 中的方法安装。 在 Linux 和 Mac OS X 中可以运行如下命令：12curl -sS">
-<meta name="twitter:image" content="http://emilyzdy.top/2017/12/01/yii2-RESTful-API/yii2/db.png">
+<meta name="twitter:image" content="http://emilyzdy.top/yii2/db.png">
   
     <link rel="alternative" href="/atom.xml" title="Y刺猬菇凉" type="application/atom+xml">
   
@@ -197,18 +197,18 @@ var _hmt = _hmt || [];
 <p></p><p style="color:red">注：在安装过程中会要求输入GitHub的账号以及密码，还有token。token的创建方法：setting/Developer settings/Personal access tokens-&gt;Generate new token</p><br>安装完毕后，创建数据库，可以使用wampserver或者PHPstudy，博主比较习惯使用wampserver，<p></p>
 <h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><p>进入项目根目录，打开命令行工具Git Bash Here,如果没有这个工具可以使用cmd命令行，使用cd命令进入项目根目录，使用以下代码初始化项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ php init</span><br></pre></td></tr></table></figure></p>
 <p>初始化过程中<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Your choice [0-1, or <span class="string">"q"</span> to quit] 0</span><br><span class="line">Initialize the application under <span class="string">'Development'</span> environment? [yes|no] yes</span><br></pre></td></tr></table></figure></p>
-<h3 id="创建数据库连接"><a href="#创建数据库连接" class="headerlink" title="创建数据库连接"></a>创建数据库连接</h3><p>项目根目录下,common-&gt;config-&gt;main-local.php<br>注意使用的Apache服务器的数据库是否需要密码<br><img src="yii2/db.png" alt="db"></p>
+<h3 id="创建数据库连接"><a href="#创建数据库连接" class="headerlink" title="创建数据库连接"></a>创建数据库连接</h3><p>项目根目录下,common-&gt;config-&gt;main-local.php<br>注意使用的Apache服务器的数据库是否需要密码<br><img src="/yii2/db.png" alt="db"></p>
 <h3 id="执行数据库迁移"><a href="#执行数据库迁移" class="headerlink" title="执行数据库迁移"></a>执行数据库迁移</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./yii migrate</span><br></pre></td></tr></table></figure>
-<h3 id="设置Apache的配置文件"><a href="#设置Apache的配置文件" class="headerlink" title="设置Apache的配置文件"></a>设置Apache的配置文件</h3><p><img src="yii2/Apache.png" alt="apache"></p>
-<h3 id="设置hosts文件"><a href="#设置hosts文件" class="headerlink" title="设置hosts文件"></a>设置hosts文件</h3><p><img src="yii2/hosts.png" alt="hosts"></p>
-<h3 id="apitpl-com注册账号"><a href="#apitpl-com注册账号" class="headerlink" title="apitpl.com注册账号"></a>apitpl.com注册账号</h3><p><img src="yii2/signup.png" alt="signup"></p>
+<h3 id="设置Apache的配置文件"><a href="#设置Apache的配置文件" class="headerlink" title="设置Apache的配置文件"></a>设置Apache的配置文件</h3><p><img src="/yii2/Apache.png" alt="apache"></p>
+<h3 id="设置hosts文件"><a href="#设置hosts文件" class="headerlink" title="设置hosts文件"></a>设置hosts文件</h3><p><img src="/yii2/hosts.png" alt="hosts"></p>
+<h3 id="apitpl-com注册账号"><a href="#apitpl-com注册账号" class="headerlink" title="apitpl.com注册账号"></a>apitpl.com注册账号</h3><p><img src="/yii2/signup.png" alt="signup"></p>
 <h3 id="后台的搭建"><a href="#后台的搭建" class="headerlink" title="后台的搭建"></a>后台的搭建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ composer require dmstr/yii2-adminlte-asset <span class="string">"2.*"</span></span><br></pre></td></tr></table></figure>
 <p>使用composer安装yii2-adminlte-asset时，博主反反复复出错，一直无法下载安装，折腾了好久，所以大家安装composer时，尽量选择高版本的php，刚开始博主使用的5.6.31。但是一直出错，所以博主重新卸载安装使用了7.1.9的版本，完美解决！<br><strong> 拷贝 vendor\dmstr\yii2-adminlte-asset\example-views\yiisoft\yii2-app 目录下面的文件到项目 backend\views, 可直接进行覆盖替换; </strong><br>此时即可输入地址浏览后台</p>
 <h3 id="导入sql语句创建数据库表"><a href="#导入sql语句创建数据库表" class="headerlink" title="导入sql语句创建数据库表"></a>导入sql语句创建数据库表</h3><h3 id="使用Gii生成代码"><a href="#使用Gii生成代码" class="headerlink" title="使用Gii生成代码"></a>使用Gii生成代码</h3><p>进入yii2后台后，点击Gii-&gt;Model Generator</p>
-<h4 id="生成活动记录类"><a href="#生成活动记录类" class="headerlink" title="生成活动记录类"></a>生成活动记录类</h4><p>选择 “Model Generator” （点击 Gii 首页的链接）去生成活动记录类。并像这样填写表单：<br>Table Name: country<br>Model Class: Country<br><img src="yii2/giil.png" alt="GII1"><br>然后点击 “Preview” 按钮。你会看到 models/Country.php 被列在将要生成的文件列表中。可以点击文件名预览内容。<br>如果你已经创建过同样的文件，使用 Gii 会覆写它， 点击文件名旁边的 diff 能查看现有文件与将要 生成的文件的内容区别。<br><img src="yii2/gii2.png" alt="GII2"><br>想要覆写已存在文件，选中 “overwrite” 下的复选框然后点击 “Generator”。如果是新文件，只点击 “Generator” 就好。<br>接下来你会看到一个包含已生成文件的说明页面。如果生成过程中覆写过文件， 还会有一条信息说明代码是重新生成覆盖的。</p>
-<h3 id="生成-CRUD-代码"><a href="#生成-CRUD-代码" class="headerlink" title="生成 CRUD 代码"></a>生成 CRUD 代码</h3><p>CRUD 代表增，查，改，删操作，这是绝大多数 Web 站点常用的数据处理方式。选择 Gii 中的 “CRUD Generator” （点击 Gii 首页的链接）去创建 CRUD 功能。本例 “country” 中需要这样填写表单：<br>Model Class: app\models\Country<br>Search Model Class: app\models\CountrySearch<br>Controller Class: app\controllers\CountryController<br><img src="yii2/gii3.png" alt="GII3"><br>然后点击 “Preview” 按钮。你会看到下述将要生成的文件列表。<br><img src="yii2/gii4.png" alt="GII4"></p>
+<h4 id="生成活动记录类"><a href="#生成活动记录类" class="headerlink" title="生成活动记录类"></a>生成活动记录类</h4><p>选择 “Model Generator” （点击 Gii 首页的链接）去生成活动记录类。并像这样填写表单：<br>Table Name: country<br>Model Class: Country<br><img src="/yii2/giil.png" alt="GII1"><br>然后点击 “Preview” 按钮。你会看到 models/Country.php 被列在将要生成的文件列表中。可以点击文件名预览内容。<br>如果你已经创建过同样的文件，使用 Gii 会覆写它， 点击文件名旁边的 diff 能查看现有文件与将要 生成的文件的内容区别。<br><img src="/yii2/gii2.png" alt="GII2"><br>想要覆写已存在文件，选中 “overwrite” 下的复选框然后点击 “Generator”。如果是新文件，只点击 “Generator” 就好。<br>接下来你会看到一个包含已生成文件的说明页面。如果生成过程中覆写过文件， 还会有一条信息说明代码是重新生成覆盖的。</p>
+<h3 id="生成-CRUD-代码"><a href="#生成-CRUD-代码" class="headerlink" title="生成 CRUD 代码"></a>生成 CRUD 代码</h3><p>CRUD 代表增，查，改，删操作，这是绝大多数 Web 站点常用的数据处理方式。选择 Gii 中的 “CRUD Generator” （点击 Gii 首页的链接）去创建 CRUD 功能。本例 “country” 中需要这样填写表单：<br>Model Class: app\models\Country<br>Search Model Class: app\models\CountrySearch<br>Controller Class: app\controllers\CountryController<br><img src="/yii2/gii3.png" alt="GII3"><br>然后点击 “Preview” 按钮。你会看到下述将要生成的文件列表。<br><img src="/yii2/gii4.png" alt="GII4"></p>
 <h3 id="试运行"><a href="#试运行" class="headerlink" title="试运行"></a>试运行</h3><p>用浏览器访问下面的 URL 查看生成代码的运行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://hostname/index.php?r=country/index</span><br></pre></td></tr></table></figure></p>
-<p><img src="yii2/gii5.png" alt="GII5"></p>
+<p><img src="/yii2/gii5.png" alt="GII5"></p>
 
                       
 
