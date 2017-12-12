@@ -180,15 +180,14 @@ var _hmt = _hmt || [];
       
         <div class="article-entry" itemprop="articleBody">
           
-                    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>博主之前都是在使用wampserver，后来了解到PHPstudy这个工具，就入坑了，使用的时候出现很多问题，所以就写篇总结记录一下，以备以后忘记。</p>
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>博主之前都是在使用wampserver，后来了解到PHPstudy这个工具，就入坑了，使用的时候出现很多问题，所以就写篇总结记录一下，以备以后忘记。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装很简单，就不说了，附上下载地址： <a href="http://www.phpstudy.net/" target="_blank" rel="noopener">PHPstudy官网</a></p>
 <h3 id="多域名配置"><a href="#多域名配置" class="headerlink" title="多域名配置"></a>多域名配置</h3><p>直接记录多域名配置了，这个会了，那么单个域名配置也就没问题了。</p>
-<p>开启PHPstudy，打开httpd.conf文件<br><img src="phpstudy/httpconf.png" alt="httpd-conf"><br>设置站点根目录<br><img src="phpstudy/dir.png" alt="站点根目录"></p>
-<p>设置这一步之后，博主的好像没有什么用，那么那你就可以打开端口常规设置<br><img src="phpstudy/port.png" alt="端口常规设置"><br>然后设置Apache的网站目录<br><img src="phpstudy/port2.png" alt="Apache的网站目录"></p>
-<p><strong> 接下来就是重点了，多域名配置 </strong><br>打开站点域名管理<br><img src="phpstudy/more.png" alt="多域名配置"><br>然后进行域名的配置就可以了<br><img src="phpstudy/more2.png" alt="多域名配置2"></p>
-<p>刚开始，博主使用的时候，直接像wampserver一样，配置了httpd-vhosts.conf文件,结果发现没什么用，所有域名站点一直指向PHPstudy的主页。<br>站点域名管理保存后，修改的是httpd.conf文件同级目录下的vhosts.conf<br>配置好域名后，记得修改hosts文件。<br>最后输入域名即可访问了。</p>
-
-                      
+              
+                <a class="article-more-a" href="/2017/12/08/PHPstudy的使用/#more">
+                  more >></a>
+                
+                  
 
                         
         </div>
@@ -278,7 +277,7 @@ var _hmt = _hmt || [];
       
         <div class="article-entry" itemprop="articleBody">
           
-                    <h3 id="创建API应用入口"><a href="#创建API应用入口" class="headerlink" title="创建API应用入口"></a>创建API应用入口</h3><p>advanced模板的三个入口：<br>console 控制台入口 backend 后台入口 frontend 前台入口<br><img src="yii2/添加入口.png" alt="api入口"><br>单独创建API应用，目的是便于维护，可以避免以下问题：</p>
+            <h3 id="创建API应用入口"><a href="#创建API应用入口" class="headerlink" title="创建API应用入口"></a>创建API应用入口</h3><p>advanced模板的三个入口：<br>console 控制台入口 backend 后台入口 frontend 前台入口<br><img src="yii2/添加入口.png" alt="api入口"><br>单独创建API应用，目的是便于维护，可以避免以下问题：</p>
 <ul>
 <li>配置的冲突</li>
 <li>控制器的命名不变</li>
@@ -286,18 +285,11 @@ var _hmt = _hmt || [];
 </ul>
 <p><img src="yii2/create.png" alt="create"></p>
 <p>模拟客户端命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -i -H <span class="string">"Accept:application/json"</span> <span class="string">"http://api.apitpl.com/articles"</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="在apache设置httpd-vhosts-conf文件中添加api入口地址"><a href="#在apache设置httpd-vhosts-conf文件中添加api入口地址" class="headerlink" title="在apache设置httpd-vhosts.conf文件中添加api入口地址"></a>在apache设置httpd-vhosts.conf文件中添加api入口地址</h3><p></p><p style="color:red">注意：</p><p></p>
-<ol>
-<li>复制backend文件后，gii生成的model和curd的namespace都要是api目录下,例如：<br><img src="yii2/crud.png" alt="curd"></li>
-<li>修改生成的controller文件，例如：<br><img src="yii2/controller.png" alt="controller"></li>
-<li>修改controllers文件夹下的siteController文件，将namespace修改为api\controllers</li>
-<li>在web文件夹下创建.htaccess文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Options +FollowSymLinks</span><br><span class="line">IndexIgnore */*</span><br><span class="line">RewriteEngine on</span><br><span class="line">RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">RewriteRule . index.php</span><br><span class="line">RewriteRule \.svn\/  /404.html</span><br><span class="line">RewriteRule \.git\/  /404.html</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>于是，终于成功了。<br><img src="yii2/success.png" alt="success"></p>
-<p>以上是博主遇到的问题，可谓是困难重重，但庆幸最后终于成功了。努力<del>~</del>fighting！</p>
-
-                      
+              
+                <a class="article-more-a" href="/2017/12/03/第一个API应用/#more">
+                  more >></a>
+                
+                  
 
                         
         </div>
