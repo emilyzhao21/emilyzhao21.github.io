@@ -159,104 +159,6 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-使用NodeJS和MongoDB创建项目" class="article article-type-post  article-index"
-  itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/10/使用NodeJS和MongoDB创建项目/">使用NodeJS和MongoDB创建项目</a>
-    </h1>
-  
-
-          
-            <a href="/2016/07/10/使用NodeJS和MongoDB创建项目/" class="archive-article-date">
-  	<time datetime="2016-07-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-10</time>
-</a>
-              
-      </header>
-      
-        <div class="article-entry" itemprop="articleBody">
-          
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>博主最近在探索怎么在本地创建项目，模拟线上项目，于是找到了NodeJS和MongoDB的使用，所以总结一下创建过程，以备以后忘记</p>
-<h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><p>在网上下载安装包，大家自行百度就可以了，这个我就不提供了</p>
-<p><strong> 检查node版本和npm版本以及安装路径 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br><span class="line">$ <span class="built_in">where</span> node</span><br></pre></td></tr></table></figure></p>
-<h3 id="ExpressJS"><a href="#ExpressJS" class="headerlink" title="ExpressJS"></a>ExpressJS</h3><p>ExpressJS是运行在NodeJS上的Web应用框架。它可以用于构建Web应用或API服务<br>使用npm安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express -g</span><br></pre></td></tr></table></figure></p>
-              
-                <a class="article-more-a" href="/2016/07/10/使用NodeJS和MongoDB创建项目/#more">
-                  more >></a>
-                
-                  
-
-                        
-        </div>
-        <div class="article-info article-info-index">
-          
-              
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-                
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/总结//" class="article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-                  
-                    <p class="article-more-link">
-                      <a class="article-more-a" href="/2016/07/10/使用NodeJS和MongoDB创建项目/">
-                        展开全文 >></a>
-                    </p>
-                    
-
-                      
-						  
-                            <div class="clearfix"></div>
-        </div>
-  </div>
-</article>
-
-      <aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-        
-
-  
     <article id="post-svn的常用命令" class="article article-type-post  article-index"
   itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -635,9 +537,103 @@ var _hmt = _hmt || [];
         
 
   
+    <article id="post-JS中数组和字符串的常用方法（二）" class="article article-type-post  article-index"
+  itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/28/JS中数组和字符串的常用方法（二）/">JS中数组和字符串的常用方法（二）</a>
+    </h1>
+  
+
+          
+            <a href="/2015/11/28/JS中数组和字符串的常用方法（二）/" class="archive-article-date">
+  	<time datetime="2015-11-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-28</time>
+</a>
+              
+      </header>
+      
+        <div class="article-entry" itemprop="articleBody">
+          
+            <p><div style="margin-bottom:5px;"></div><br>昨天总结了数组的方法，今天安利一下字符串常用的方法，一般数组方法和字符串方法都是结合使用的，先将基础方法总结一下，利于使用。之后会给大家安利一下关于这方面的面试题。</p>
+<h2 id="字符串的方法"><a href="#字符串的方法" class="headerlink" title="字符串的方法"></a>字符串的方法</h2><h3 id="split-方法"><a href="#split-方法" class="headerlink" title="split()方法"></a>split()方法</h3><p><strong>使用指定的分隔符字符串将一个String对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置</strong><br><strong>参数:</strong></p>
+<ol>
+<li>字符串中存在的分隔符，在有此分隔符的地方进行分隔<br>例:<img src="/img/js/split.png" alt="split">
+              
+                <a class="article-more-a" href="/2015/11/28/JS中数组和字符串的常用方法（二）/#more">
+                  more >></a>
+                
+                  
+
+                        
+        </div>
+        <div class="article-info article-info-index">
+          
+              
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+                
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JS//" class="article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+                  
+                    <p class="article-more-link">
+                      <a class="article-more-a" href="/2015/11/28/JS中数组和字符串的常用方法（二）/">
+                        展开全文 >></a>
+                    </p>
+                    
+
+                      
+						  
+                            <div class="clearfix"></div>
+        </div>
+  </div>
+</article>
+
+      <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+        
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
