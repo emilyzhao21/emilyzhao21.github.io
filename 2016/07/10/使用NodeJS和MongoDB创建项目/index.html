@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://emilyzdy.top">
-  <title>Archives: 2017/12 | Y刺猬菇凉</title>
+  <title>使用NodeJS和MongoDB创建项目 | Y刺猬菇凉</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="html,css,js,Web前端开发工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Y刺猬菇凉">
-<meta property="og:url" content="http://emilyzdy.top/archives/2017/12/index.html">
+  <meta name="description" content="前言博主最近在探索怎么在本地创建项目，模拟线上项目，于是找到了NodeJS和MongoDB的使用，所以总结一下创建过程，以备以后忘记 安装Node在网上下载安装包，大家自行百度就可以了，这个我就不提供了  检查node版本和npm版本以及安装路径 123$ node -v$ npm -v$ where node Exp">
+<meta name="keywords" content="总结,教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用NodeJS和MongoDB创建项目">
+<meta property="og:url" content="http://emilyzdy.top/2016/07/10/使用NodeJS和MongoDB创建项目/index.html">
 <meta property="og:site_name" content="Y刺猬菇凉">
-<meta property="og:description" content="html,css,js,Web前端开发工程师">
+<meta property="og:description" content="前言博主最近在探索怎么在本地创建项目，模拟线上项目，于是找到了NodeJS和MongoDB的使用，所以总结一下创建过程，以备以后忘记 安装Node在网上下载安装包，大家自行百度就可以了，这个我就不提供了  检查node版本和npm版本以及安装路径 123$ node -v$ npm -v$ where node ExpressJSExpressJS是运行在NodeJS上的Web应用框架。它可以用于">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://emilyzdy.top/img/node/nodepath.png">
+<meta property="og:updated_time" content="2017-12-12T12:15:56.773Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Y刺猬菇凉">
-<meta name="twitter:description" content="html,css,js,Web前端开发工程师">
+<meta name="twitter:title" content="使用NodeJS和MongoDB创建项目">
+<meta name="twitter:description" content="前言博主最近在探索怎么在本地创建项目，模拟线上项目，于是找到了NodeJS和MongoDB的使用，所以总结一下创建过程，以备以后忘记 安装Node在网上下载安装包，大家自行百度就可以了，这个我就不提供了  检查node版本和npm版本以及安装路径 123$ node -v$ npm -v$ where node ExpressJSExpressJS是运行在NodeJS上的Web应用框架。它可以用于">
+<meta name="twitter:image" content="http://emilyzdy.top/img/node/nodepath.png">
   
     <link rel="alternative" href="/atom.xml" title="Y刺猬菇凉" type="application/atom+xml">
   
@@ -157,36 +161,68 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-使用NodeJS和MongoDB创建项目" class="article article-type-post "
+  itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/08/PHPstudy的使用/" class="archive-article-date">
-  	<time datetime="2017-12-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/08/PHPstudy的使用/">PHPstudy的多域名配置</a>
+    <h1 class="article-title" itemprop="name">
+      使用NodeJS和MongoDB创建项目
     </h1>
   
 
-        <div class="article-info info-on-right">
           
+            <a href="/2016/07/10/使用NodeJS和MongoDB创建项目/" class="archive-article-date">
+  	<time datetime="2016-07-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-10</time>
+</a>
+              
+      </header>
+      
+        <div class="article-entry" itemprop="articleBody">
+          
+                    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>博主最近在探索怎么在本地创建项目，模拟线上项目，于是找到了NodeJS和MongoDB的使用，所以总结一下创建过程，以备以后忘记</p>
+<h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><p>在网上下载安装包，大家自行百度就可以了，这个我就不提供了</p>
+<p><strong> 检查node版本和npm版本以及安装路径 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br><span class="line">$ <span class="built_in">where</span> node</span><br></pre></td></tr></table></figure></p>
+<h3 id="ExpressJS"><a href="#ExpressJS" class="headerlink" title="ExpressJS"></a>ExpressJS</h3><p>ExpressJS是运行在NodeJS上的Web应用框架。它可以用于构建Web应用或API服务<br>使用npm安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express -g</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>因为express4.x将命令工具分离出来了，所以需要先安装express-generator<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g express-generator</span><br></pre></td></tr></table></figure></p>
+<p>想要在全局中使用express，需要先进行环境变量的配置<br>我的电脑=&gt;属性=&gt;高级系统设置=&gt;环境变量<br>添加NODE_PATH<br><img src="/img/node/nodepath.png" alt="node_path"><br>然后，在path的环境变量配置下增加%NODE_PATH%<br>此时就可以在全局使用express命令了<br>查看express的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ express --version</span><br></pre></td></tr></table></figure></p>
+<h3 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h3><p>windows各个版本下载：<a href="http://dl.mongodb.org/dl/win32/x86_64" target="_blank" rel="noopener">下载地址</a><br>安装好后配置环境变量：<strong>在path路径下添加MongoDB安装目录下的bin</strong><br>在命令行输入<code>mongod --version</code>查看版本信息</p>
+
+                      
+
+                        
+                          <div class="page-reward">
+                            <a href="javascript:;" class="page-reward-btn tooltip-top">
+                              <div class="tooltip tooltip-east">
+                                <span class="tooltip-item">
+                                  赏
+                                </span>
+                                <span class="tooltip-content">
+                                  <span class="tooltip-text">
+                                    <span class="tooltip-inner">
+                                      <p class="reward-p">
+                                        <i class="icon icon-quo-left"></i>
+                                        谢谢你请我吃糖果
+                                          <i class="icon icon-quo-right"></i>
+                                      </p>
+                                      <div class="reward-box">
+                                        
+                                            
+                                      </div>
+                                    </span>
+                                  </span>
+                                </span>
+                              </div>
+                            </a>
+                          </div>
+                          
+        </div>
+        <div class="article-info article-info-index">
+          
+              
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,31 +238,200 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+                
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
+        			<a href="/categories/总结//" class="article-tag-list-link color3">总结</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+                  
+
+                      
+                        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://emilyzdy.top/2016/07/10/使用NodeJS和MongoDB创建项目/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+                          
+						  
+							
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://emilyzdy.top/2016/07/10/使用NodeJS和MongoDB创建项目/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+						  
+                            <div class="clearfix"></div>
+        </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/11/19/第一个API应用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          第一个api应用
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2016/05/21/svn的常用命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">svn的常用命令（CMD）</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
 
     
+      <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
 
+
+        
+          
+
+                
+
+                      
+                            
+								<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUxNC83MDY4" style="margin:0 25px;">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+                            
+
+                                  
+
+                                      
+                                            
 
           </div>
         </div>
@@ -257,8 +462,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

@@ -6,26 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://emilyzdy.top">
-  <title>第一个api应用 | Y刺猬菇凉</title>
+  <title>Archives: 2016/7 | Y刺猬菇凉</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="创建API应用入口advanced模板的三个入口：console 控制台入口 backend 后台入口 frontend 前台入口">
-<meta name="keywords" content="教程,yii2.0">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第一个api应用">
-<meta property="og:url" content="http://emilyzdy.top/2017/12/03/第一个API应用/index.html">
+  <meta name="description" content="html,css,js,Web前端开发工程师">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y刺猬菇凉">
+<meta property="og:url" content="http://emilyzdy.top/archives/2016/07/index.html">
 <meta property="og:site_name" content="Y刺猬菇凉">
-<meta property="og:description" content="创建API应用入口advanced模板的三个入口：console 控制台入口 backend 后台入口 frontend 前台入口">
+<meta property="og:description" content="html,css,js,Web前端开发工程师">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://emilyzdy.top/img/yii2/添加入口.png">
-<meta property="og:image" content="http://emilyzdy.top/img/yii2/create.png">
-<meta property="og:image" content="http://emilyzdy.top/img/yii2/crud.png">
-<meta property="og:image" content="http://emilyzdy.top/img/yii2/controller.png">
-<meta property="og:image" content="http://emilyzdy.top/img/yii2/success.png">
-<meta property="og:updated_time" content="2017-12-12T06:04:26.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一个api应用">
-<meta name="twitter:description" content="创建API应用入口advanced模板的三个入口：console 控制台入口 backend 后台入口 frontend 前台入口">
-<meta name="twitter:image" content="http://emilyzdy.top/img/yii2/添加入口.png">
+<meta name="twitter:title" content="Y刺猬菇凉">
+<meta name="twitter:description" content="html,css,js,Web前端开发工程师">
   
     <link rel="alternative" href="/atom.xml" title="Y刺猬菇凉" type="application/atom+xml">
   
@@ -165,289 +157,76 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-第一个API应用" class="article article-type-post "
-  itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      第一个api应用
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/07/10/使用NodeJS和MongoDB创建项目/" class="archive-article-date">
+  	<time datetime="2016-07-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-10</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/07/10/使用NodeJS和MongoDB创建项目/">使用NodeJS和MongoDB创建项目</a>
     </h1>
   
 
+        <div class="article-info info-on-right">
           
-            <a href="/2017/12/03/第一个API应用/" class="archive-article-date">
-  	<time datetime="2017-12-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
-</a>
-              
-      </header>
-      
-        <div class="article-entry" itemprop="articleBody">
-          
-                    <h3 id="创建API应用入口"><a href="#创建API应用入口" class="headerlink" title="创建API应用入口"></a>创建API应用入口</h3><p>advanced模板的三个入口：<br>console 控制台入口 backend 后台入口 frontend 前台入口<br><img src="/img/yii2/添加入口.png" alt="api入口"></p>
-<a id="more"></a>
-<p>单独创建API应用，目的是便于维护，可以避免以下问题：</p>
-<ul>
-<li>配置的冲突</li>
-<li>控制器的命名不变</li>
-<li>url美化规则冲突</li>
-</ul>
-<p><img src="/img/yii2/create.png" alt="create"></p>
-<p>模拟客户端命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ curl -i -H <span class="string">"Accept:application/json"</span> <span class="string">"http://api.apitpl.com/articles"</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="在apache设置httpd-vhosts-conf文件中添加api入口地址"><a href="#在apache设置httpd-vhosts-conf文件中添加api入口地址" class="headerlink" title="在apache设置httpd-vhosts.conf文件中添加api入口地址"></a>在apache设置httpd-vhosts.conf文件中添加api入口地址</h3><p></p><p style="color:red">注意：</p><p></p>
-<ol>
-<li>复制backend文件后，gii生成的model和curd的namespace都要是api目录下,例如：<br><img src="/img/yii2/crud.png" alt="curd"></li>
-<li>修改生成的controller文件，例如：<br><img src="/img/yii2/controller.png" alt="controller"></li>
-<li>修改controllers文件夹下的siteController文件，将namespace修改为api\controllers</li>
-<li>在web文件夹下创建.htaccess文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Options +FollowSymLinks</span><br><span class="line">IndexIgnore */*</span><br><span class="line">RewriteEngine on</span><br><span class="line">RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">RewriteRule . index.php</span><br><span class="line">RewriteRule \.svn\/  /404.html</span><br><span class="line">RewriteRule \.git\/  /404.html</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>于是，终于成功了。<br><img src="/img/yii2/success.png" alt="success"></p>
-<p>以上是博主遇到的问题，可谓是困难重重，但庆幸最后终于成功了。努力<del>~</del>fighting！</p>
-
-                      
-
-                        
-                          <div class="page-reward">
-                            <a href="javascript:;" class="page-reward-btn tooltip-top">
-                              <div class="tooltip tooltip-east">
-                                <span class="tooltip-item">
-                                  赏
-                                </span>
-                                <span class="tooltip-content">
-                                  <span class="tooltip-text">
-                                    <span class="tooltip-inner">
-                                      <p class="reward-p">
-                                        <i class="icon icon-quo-left"></i>
-                                        谢谢你请我吃糖果
-                                          <i class="icon icon-quo-right"></i>
-                                      </p>
-                                      <div class="reward-box">
-                                        
-                                            
-                                      </div>
-                                    </span>
-                                  </span>
-                                </span>
-                              </div>
-                            </a>
-                          </div>
-                          
-        </div>
-        <div class="article-info article-info-index">
-          
-              
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">yii2.0</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
         		</li>
       		
 		</ul>
 	</div>
 
-                
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/教程//" class="article-tag-list-link color3">教程</a>
+        			<a href="/categories/总结//" class="article-tag-list-link color3">总结</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-                  
-
-                      
-                        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://emilyzdy.top/2017/12/03/第一个API应用/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-                          
-						  
-							
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://emilyzdy.top/2017/12/03/第一个API应用/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-						  
-                            <div class="clearfix"></div>
-        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/12/08/PHPstudy的使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PHPstudy的多域名配置
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/12/01/yii2-RESTful-API/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Yii2 RESTful API 开发</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    </div></section>
   
-</nav>
 
     
-      <aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
-
-        
-          
-
-                
-
-                      
-                            
-								<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUxNC83MDY4" style="margin:0 25px;">
-	<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-	</script>
-<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
-
-                            
-
-                                  
-
-                                      
-                                            
 
           </div>
         </div>
@@ -478,8 +257,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
